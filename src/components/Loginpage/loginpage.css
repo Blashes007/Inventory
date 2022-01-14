@@ -1,0 +1,107 @@
+.box_div{
+    min-width: 1200px;
+    /* margin: auto;  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(3,168,119);
+    height: 550px;
+    
+    
+    
+  }
+
+  .green{
+    background-color: green;
+    height: 100vh;
+  
+  }
+  .close_icon{
+   margin-left: 250px !important;
+  }
+  .login_div{
+    padding:20px;
+  }
+  .company_name_div {
+    width: 300px;
+ background: grey;
+    height:550px;
+    
+  }
+  .continueBtn{
+  background: rgb(3,168,119) ;
+    background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%) ;
+    padding: 10px 60px !important;
+    cursor: pointer;
+    border-radius: 30px !important;
+    color:white;
+    margin-top: 50px;
+  
+    
+   
+   
+    
+  }
+  
+  
+  
+  
+  .avatarStyle{
+    background: rgb(3,168,119) !important;
+    background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%) !important;
+    margin-Top: 20px !important;
+  }
+    
+  
+  .txtBox{
+   padding: 150px 0px ;
+   text-align: center;
+   
+   color:white;
+   
+   
+  
+   
+   
+   
+  }
+
+
+  .txtBox1{
+    
+    text-align: center;
+    
+    color:white;
+    }
+  .txtAuto{
+    width: 100%;
+  }        
+  
+  .usernameTxt{
+    width: 325px;
+    margin-top: 50px !important;
+    margin-right: 300px !important;
+    margin-left:50px !important;
+    
+  }
+
+
+
+  .Account{
+      margin-left: 300px;
+  }
+
+  .cmauto{
+    margin-right: 300px !important;
+    margin-top: 100px;
+    margin-left: 0px;
+
+  }
+
+  .cmauto1{}
+  .gg{
+    margin-top: 20px !important;
+    margin-right: 300px !important;
+    margin-left:50px !important;
+  }

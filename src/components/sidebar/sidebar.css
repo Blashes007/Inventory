@@ -1,0 +1,151 @@
+.sidebar {
+    flex: 1;
+    height:100vh;
+  
+    position: sticky;
+    
+    background: rgb(15,111,111);
+    background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+    
+  }
+  .sidebarWrapper {
+    
+    color: #555;
+  }
+  
+  .sidebarMenu {
+    margin-bottom: 10px;
+  
+  }
+  
+  .sidebarTitle {
+    font-size: 20px;
+    color: #ffffff;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .sidebarComponents{
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+  
+  }
+  
+  .sidebarList {
+    list-style: none;
+    padding-left: 5px;
+   
+  }
+  
+  .sidebarListItem {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  
+  .sidebarListItem:hover  {
+    background-color: rgb(166, 166, 173);
+  }
+  .sidebaritem1{
+    margin-right: 98px;
+  }
+  .sidebaritemm{
+    margin-right: 112px;
+  }
+  .sidebaritem2{
+    margin-right: 100px;
+  }
+  .sidebaritem3{
+    margin-right: 128px;
+  }
+  .sidebaritem4{
+    margin-right: 117px;
+  }
+  
+  .sidebarIcon{
+      margin-right: 5px;
+      font-size: 20px !important;
+  }
+  
+  .sidebarListItemLogout{
+   
+    cursor: pointer;
+   
+    margin-top: 200px;
+    
+    margin-left: -5px;
+    
+  
+  }
+  .btnTxt{
+    color:white;
+  }
+  .btnTxt1{
+    color:white;
+  }
+  .logo{
+    margin-left: 60px;
+    margin-top: 10px;
+    
+    
+   
+  }
+  img{
+    height: 120px;
+    width: 120px;
+  }
+  .closeicon{
+    color: #ffffff;
+    text-align: right;
+    margin-top: -1px;
+    
+  }
+  .version{
+    color: #ffffff;
+    text-align: right;
+    margin-top: -25px;
+    
+  }
+  .purchasecomponents{
+    background: rgb(15,111,111);
+  background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+    margin-left: 302px;
+    margin-top: -57px;
+    position: absolute;
+    
+    
+  }
+  .salescomponents{
+    background: rgb(15,111,111);
+    background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+    position: absolute;
+    margin-left: 302px;
+    margin-top: -60px;
+  }
+  .customercomponents{
+    background: rgb(15,111,111);
+  background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+    margin-left: 302px;
+    margin-top: -70px;
+    position: absolute;
+    display: none;
+  }
+  .reportcomponents{
+    background: rgb(15,111,111);
+    background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+    margin-left: 302px;
+    margin-top: -53px;
+    position: absolute;
+  }
+  
+  .arrowicon{
+    margin-left: 70px;
+  }
+  
+  
+  
+  
