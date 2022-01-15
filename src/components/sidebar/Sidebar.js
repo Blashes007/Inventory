@@ -4,15 +4,33 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-import { withThemeCreator } from '@material-ui/styles';
+import {
+  PermIdentity
+} from "@material-ui/icons";
+import './sidebar.css';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LogoutIcon from '@mui/icons-material/Logout';
+import ReportIcon from '@mui/icons-material/Report';
+import { Button } from "@material-ui/core";
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import FeaturedInfo from '../Featuredinfo/Featuredinfo';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  marginLeft: 15,
+  marginTop:30,
+  height:400,
+}));
+
 
 const drawerWidth = 270;
 
@@ -42,10 +60,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
 }));
-
+const logouticon ={ transform: 'rotate(180deg)'}
 export default function Sidebar() {
   const classes = useStyles();
-
+  
 
 
   return (
@@ -56,6 +74,16 @@ export default function Sidebar() {
           <Typography variant="h6" noWrap>
             Dashboard
           </Typography>
+
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -73,27 +101,51 @@ export default function Sidebar() {
             
           
         <Divider />
-        <List>
-          {['Dashboard', 'Customer', 'Purchase', 'Sales','Report'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <h2> Account Page</h2>
-        <List>
-          {['Sign Out'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        
+              <li className="sidebarListItem" >
+                <PermIdentity className="sidebarIcon" />
+                <h4 className="sidebaritem1" >Dashboard</h4> 
+              </li>
+
+              <li className="sidebarListItem" >
+                <PermIdentity className="sidebarIcon" />
+                <h4 className="sidebaritemm" >Customer</h4>
+              </li>
+
+              <li className="sidebarListItem">
+                <ShoppingCartIcon className="sidebarIcon" />
+                  <h4 className="sidebaritem2">Purchase</h4>
+              </li>
+
+              <li className="sidebarListItem">
+                <MonetizationOnIcon className="sidebarIcon" />
+                  <h4 className="sidebaritem3">Sales</h4> 
+              </li>
+
+              <li className="sidebarListItem">
+                <ReportIcon className="sidebarIcon" />
+                <h4 className="sidebaritem4">Report</h4> 
+              </li>
+
+              
+              <h1>Account Page</h1>
+              <li className="sidebarListItemLogout" >        
+             <Button >
+               <LogoutIcon  className="btnTxt1"   style={logouticon}/> <h4 className="btnTxt">Logout</h4>
+            </Button>
+            </li>
+
+
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        
+        <FeaturedInfo/>
+        <Grid container color ="blue" spacing={2}>
+  <Grid item xs={12}>
+  <Item></Item>
+  </Grid>
+  
+</Grid>
       </main>
     </div>
   );
