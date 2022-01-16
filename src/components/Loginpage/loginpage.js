@@ -33,7 +33,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
- function loginpage() {
+ function Loginpage() {
 
   
 
@@ -108,7 +108,7 @@ const Item = styled(Paper)(({ theme }) => ({
     )
 
     }
-export default loginpage ;
+export default Loginpage ;
 
 
 

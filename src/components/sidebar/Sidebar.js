@@ -75,7 +75,7 @@ export default function Sidebar() {
             Dashboard
           </Typography>
 
-          <Search>
+          {/* <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -83,7 +83,7 @@ export default function Sidebar() {
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
             />
-          </Search>
+          </Search> */}
         </Toolbar>
       </AppBar>
       <Drawer
