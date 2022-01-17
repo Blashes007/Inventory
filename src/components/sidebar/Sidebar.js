@@ -19,7 +19,52 @@ import FeaturedInfo from '../Featuredinfo/Featuredinfo';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import { styled, alpha } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+import SearchIcon from '@mui/icons-material/Search';
+import HomeSharpIcon from '@material-ui/icons/HomeSharp';
+import GroupIcon from '@material-ui/icons/Group';
+import InsertDriveFileSharpIcon from '@material-ui/icons/InsertDriveFileSharp';
+
+
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor:'lightgrey',
+  marginRight: theme.spacing(2),
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(3),
+    width: 'auto',
+  },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '20ch',
+      
+    },
+  },
+}));
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -27,8 +72,11 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
   marginLeft: 15,
-  marginTop:30,
+  marginTop:2,
   height:400,
+  borderRadius:10,
+  width:1050,
+  
 }));
 
 
@@ -51,6 +99,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor:'whitesmoke'
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
@@ -58,6 +107,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(3),
+    backgroundColor:'whitesmoke'
   },
 }));
 const logouticon ={ transform: 'rotate(180deg)'}
@@ -71,19 +121,24 @@ export default function Sidebar() {
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar} color="default">
         <Toolbar>
-          <Typography variant="h6" noWrap>
-            Dashboard
-          </Typography>
-
-          {/* <Search>
+          <h2 className= "dashboard">Dashboard</h2>
+          
+          <Search className='search'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              
             />
-          </Search> */}
+          </Search>
+          <div className='accountcircle'>
+          
+          <AccountCircle fontSize="large" /><h3 className='admin'>Admin</h3>
+          </div>
+
+          
         </Toolbar>
       </AppBar>
       <Drawer
@@ -103,47 +158,70 @@ export default function Sidebar() {
         <Divider />
         
               <li className="sidebarListItem" >
-                <PermIdentity className="sidebarIcon" />
-                <h4 className="sidebaritem1" >Dashboard</h4> 
+                <HomeSharpIcon className="sidebarIcon" />
+                <h3 className="sidebaritem1" >Dashboard</h3> 
               </li>
 
               <li className="sidebarListItem" >
-                <PermIdentity className="sidebarIcon" />
-                <h4 className="sidebaritemm" >Customer</h4>
+                <GroupIcon className="sidebarIcon" />
+                <h3 className="sidebaritemm" >Customer</h3>
               </li>
 
               <li className="sidebarListItem">
                 <ShoppingCartIcon className="sidebarIcon" />
-                  <h4 className="sidebaritem2">Purchase</h4>
+                  <h3 className="sidebaritem2">Purchase</h3>
               </li>
 
               <li className="sidebarListItem">
+              
                 <MonetizationOnIcon className="sidebarIcon" />
-                  <h4 className="sidebaritem3">Sales</h4> 
+                  <h3 className="sidebaritem3">Sales</h3> 
               </li>
 
               <li className="sidebarListItem">
-                <ReportIcon className="sidebarIcon" />
-                <h4 className="sidebaritem4">Report</h4> 
+                <InsertDriveFileSharpIcon className="sidebarIcon" />
+                <h3 className="sidebaritem4">Report</h3> 
               </li>
 
               
               <h1>Account Page</h1>
               <li className="sidebarListItemLogout" >        
-             <Button >
-               <LogoutIcon  className="btnTxt1"   style={logouticon}/> <h4 className="btnTxt">Logout</h4>
-            </Button>
+             
+               <LogoutIcon  className="btnTxt1"   style={logouticon}/>
+                <h3 className="btnTxt">Logout</h3>
+            
             </li>
 
 
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
+        
+
+      <div className='dotdiv'>
+      <span className='greendot'></span>
+      <span className='todayscollection'> Today's Collection</span> 
+      </div>
+        
+        <div className='reddiv'>
+        <span className='reddot'></span> <span className='purchase'>Purchase</span>
+        </div>
+
+         <div className='bluediv'>
+         <span className='bluedot'></span><span>Sales</span> 
+           </div> 
+         
+         <div className='lastdiv'>
+         <span className='lastdot'></span>   <span>NewCutomer</span>
+         </div>
+           
+       
         <FeaturedInfo/>
         <Grid container color ="blue" spacing={2}>
   <Grid item xs={12}>
   <Item></Item>
   </Grid>
+  
   
 </Grid>
       </main>
