@@ -1,244 +1,382 @@
+
 .sidebar {
-    flex: 1;
-    height:100vh;
-  
-    position: sticky;
-    
-    background: rgb(15,111,111);
-    background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
-    
-  }
-  .sidebarWrapper {
-    
-    color: #555;
-  }
-  
-  .sidebarMenu {
-    margin-bottom: 10px;
-  
-  }
-  
-  .sidebarTitle {
-    font-size: 20px;
-    color: #ffffff;
-    margin-left: 50px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-  }
-  .sidebarComponents{
-    text-decoration: none;
-    font-size: 16px;
-    color: #ffffff;
-  
-  }
-  
-  .sidebarList {
-    list-style: none;
-    padding-left: 5px;
-   
-  }
-  
-  .sidebarListItem {
-    padding: 1px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    margin-top: 5px;
-    
-  }
-  
-  
-  .sidebarListItem:hover  {
-    background-color: rgb(166, 166, 173);
-  }
-  .sidebaritem1{
-    margin-right: 98px;
-    
-    
-  }
-  .sidebaritemm{
-    margin-right: 112px;
-  }
-  .sidebaritem2{
-    margin-right: 100px;
-  }
-  .sidebaritem3{
-    margin-right: 128px;
-  }
-  .sidebaritem4{
-    margin-right: 117px;
-  }
-  
-  .sidebarIcon{
-      margin-right: 5px;
-      font-size: 40px !important;
-      padding:1px 5px;
-      background-color: white;
-      border-radius: 10px;
-      margin-left: 50px;
-    
-      
-  }
-  
-  .sidebarListItemLogout{
-   
-    cursor: pointer;
-   
-    margin-top: 50px;
-    
-    margin-left: 55px;
+  flex: 1;
+  height:100vh;
 
-    padding: 1px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    
+  position: sticky;
   
-  }
-  .btnTxt{
-    color:black;
-  }
-  .btnTxt1{
-    color:black;
-    padding: 1px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    margin-left: -5px;
+  background: rgb(15,111,111);
+  background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+  
+}
+.sidebarWrapper {
+  
+  color: #555;
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+
+}
+
+.sidebarTitle {
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 50px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.sidebarComponents{
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+
+}
+
+/* .sidebarList {
+  list-style: none;
+  padding-left: 5px;
+ 
+} */
+
+.sidebarListItem {
+  padding: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 5px;
+  
+}
+
+
+.sidebarListItem:hover  {
+  background-color: rgb(166, 166, 173);
+}
+.sidebaritem1{
+  margin-left: 10px;
+  
+  
+}
+.sidebaritemm{
+  margin-left: 10px;
+}
+.sidebaritem2{
+  margin-left: 10px;
+}
+.sidebaritem3{
+  /* margin-right: 100px; */
+  margin-left: 15px;
+}
+.sidebaritem4{
+  margin-left: 10px;
+}
+
+.sidebarIcon{
+    margin-right: 5px;
+    font-size: 40px !important;
     padding:1px 5px;
-      background-color: white;
-      border-radius: 10px;
-      font-size: 30px !important;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 50px;
+  
     
+}
+.rupeesimg{
+  height:40px;
+  width:40px;
+  margin-left: 50px;
 
-  }
-  .logo{
-    margin-left: 60px;
-    margin-top: 10px;
+}
+
+
+.sidebarListItemLogout{
+  padding: 1px;
+  cursor: pointer;
+ 
+    align-items: center;
+  border-radius: 10px;
+  margin-top: 5px;
+  
+
+/*  
+  cursor: pointer;
+
+  margin-top: -10px;
+  margin-left: 55px;
+ 
+  cursor: pointer;
+  display: flex;
+  align-items: center; */
+  
+  
+
+  
+  
+
+}
+
+.sidebarListItemLogout:hover  {
+  background-color: rgb(166, 166, 173);
+ 
+
+}
+.logoutimg{
+  /* height:42px;
+  width: 42px;
+  margin-top:-50px;
+  margin-left: 50px;
+  padding:1px 2px;
+  border-radius: 10px; */
+  margin-top:0px;
+  margin-left: 50px;
+
+
+    font-size: 40px !important;
+    /* padding:1px 5px ; */
+    background-color: white;
+    border-radius: 10px;
     
-    
-   
-  }
-  img{
-    height: 120px;
-    width: 120px;
-  }
-  .closeicon{
-    color: #ffffff;
-    text-align: right;
-    margin-top: -1px;
-    
-  }
-  .version{
-    color: #ffffff;
-    text-align: right;
-    margin-top: -25px;
-    
-  }
-  .purchasecomponents{
-    background: rgb(15,111,111);
+    height:42px;
+  width: 42px;
+ 
+  
+}
+
+.AccountPage{
+  margin-left: 20px;
+}
+.btnTxt{
+  color:black;
+  height:80px;
+  width:80px;
+  margin-left: 100px;
+  margin-top: -40px;
+  
+}
+.btnTxt1{
+  color:black;
+  
+
+  
+  border-radius: 10px;
+  margin-left: -5px;
+
+  padding:100px 500px;
+    background-color: white;
+    font-size: 30px !important;
+    margin-top:-50px ;
+
+  
+
+}
+.logo{
+  margin-left: 60px;
+  margin-top: 10px;
+  
+  
+ 
+}
+img{
+  height: 120px;
+  width: 120px;
+}
+.closeicon{
+  color: #ffffff;
+  text-align: right;
+  margin-top: -1px;
+  
+}
+.version{
+  color: #ffffff;
+  text-align: right;
+  margin-top: -25px;
+  
+}
+.purchasecomponents{
+  background: rgb(15,111,111);
+background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+  margin-left: 302px;
+  margin-top: -57px;
+  position: absolute;
+  
+  
+}
+.salescomponents{
+  background: rgb(15,111,111);
   background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
-    margin-left: 302px;
-    margin-top: -57px;
-    position: absolute;
-    
-    
-  }
-  .salescomponents{
-    background: rgb(15,111,111);
-    background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
-    position: absolute;
-    margin-left: 302px;
-    margin-top: -60px;
-  }
-  .customercomponents{
-    background: rgb(15,111,111);
+  position: absolute;
+  margin-left: 302px;
+  margin-top: -60px;
+}
+.customercomponents{
+  background: rgb(15,111,111);
+background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+  margin-left: 302px;
+  margin-top: -70px;
+  position: absolute;
+  display: none;
+}
+.reportcomponents{
+  background: rgb(15,111,111);
   background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
-    margin-left: 302px;
-    margin-top: -70px;
-    position: absolute;
-    display: none;
-  }
-  .reportcomponents{
-    background: rgb(15,111,111);
-    background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
-    margin-left: 302px;
-    margin-top: -53px;
-    position: absolute;
-  }
-  
-  .arrowicon{
-    margin-left: 70px;
-  }
-  
-  .accountcircle{
-    margin-left: 700px;
-    
-    
-  }
+  margin-left: 302px;
+  margin-top: -53px;
+  position: absolute;
+}
+
+.arrowicon{
+  margin-left: 70px;
+}
+
+.accountcircle{
+ 
   
   
-  .greendot{
-    
-    padding:2px 10px;
-    
-    background-color:limegreen;
-    
-  }
+}
+
+
+.dotdiv{
+  margin-top: 100px;
+ 
+  font-size: 15px;
+}
+
+.greendot{
+  
+  padding:2px 10px;
+  margin-left:400px;
+  background-color:limegreen;
+  
+}
+.todayscollection{
+  margin-top: 100px;
+  margin-left:10px;
+}
+
+
+.reddiv{
+ 
+  margin-right: 300px;
+  margin-top: -20px;
+  font-size: 15px;
+
+}
+
+.reddot{
+  padding:2px 10px;
+  margin-left: 580px;
+  background-color:red;
+ 
+  
+}
+
+
+.bluediv{
+  margin-left: 100px;
+  margin-top: -20px;
+  font-size: 15px;
+
+}
+
+.bluedot{
+  
+  padding:2px 10px;
+  margin-left: 600px;
+  background-color:blue;
+  
+}
+
+
+
+.lastdot{
+  padding:2px 10px;
+  margin-left: 700px;
+  background-color:#067A7A
+  
+}
+
+
+
+
+.lastdiv{
+  margin-left: 100px;
+  margin-top: -20px;
+  font-size: 15px;
+
+}
+
+.search{
+  /* margin-left: 400px !important; */
+  margin-top: 40px;
+  background-color: rgb(148, 148, 155);
 
   
-  .reddot{
-    padding:2px 10px;
-    margin-left: 300px;
-    background-color:red;
-    
-  }
+}
+.dashboard{
+  /* margin-right: 0px !important; */
+  margin-top: 80px !important;
+}
+.purchase{
+  margin-top: 100px;
+  margin-left:10px;
 
-  .bluedot{
-    padding:2px 10px;
-    
-    background-color:blue;
-    
-  }
+}
 
-  .lastdot{
-    padding:2px 10px;
-   
-    background-color:blueviolet;
-    
-  }
+.sales{
+  margin-top: 100px;
+  margin-left:10px;
 
-  .dotdiv{
-    margin-top: 20px;
-    margin-right: 800px;
-    font-size: 15px;
-  }
-  .reddiv{
-    margin-top: -15px;
-    margin-right: 600px;
+}
 
-  }
-  .bluediv{
-    margin-top: -20px;
-    margin-right: 0px;
+.newcustomer{
+  margin-top: 100px;
+  margin-left:10px;
 
-  }
+}
+.Adminicon{
+  margin-top:0px;
+  margin-left: 350px;
+  height:45px;
+  width:45px;
+}
+.admin{
+  margin-top:-40px;
+  margin-left: 400px;
+  font-size: 20px;
+  color:grey;
 
-  .lastdiv{
-    margin-top: -20px;
-    margin-right: -200px;
-
-  }
-
-  .search{
-    /* margin-left: 400px !important; */
-    margin-top: 40px;
-    
-  }
-  .dashboard{
-    /* margin-right: 0px !important; */
-    margin-top: 80px !important;
-  }
+}
+.accountcircle{
+  margin-top:38px;
   
+}
+
+.version{
+  
+  
+  color:grey;
+   margin-top: 125px !important;
+    margin-left: -50px !important;
+    font-size: 20px !important;
+    font-weight: 100px !important;
+    text-align: center;
+}
+.AccountPage{
+  color:grey;
+  font-size: 20px;
+  margin-left: 50px !important;
+
+
+}
+
+.Heading{
+  margin-left: 50px;
+  color:grey;
+}
+.drawer{
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(202, 35, 35, 0.75);
+  box-shadow: 100px 10px 20px -10px rgba(155, 19, 19, 0.75);
+ 
+
+}

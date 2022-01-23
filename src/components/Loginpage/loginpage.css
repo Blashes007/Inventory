@@ -1,107 +1,198 @@
 .box_div{
-    min-width: 1200px;
-    /* margin: auto;  */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: rgb(3,168,119);
-    height: 550px;
-    
-    
-    
-  }
+  min-width: 350px;
+  /* margin: auto;  */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 
-  .green{
-    background-color: green;
-    height: 100vh;
-  
-  }
-  .close_icon{
-   margin-left: 250px !important;
-  }
-  .login_div{
-    padding:20px;
-  }
-  .company_name_div {
-    width: 300px;
- background: grey;
-    height:550px;
-    
-  }
-  .continueBtn{
-  background: rgb(3,168,119) ;
-    background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%) ;
-    padding: 10px 60px !important;
-    cursor: pointer;
-    border-radius: 30px !important;
-    color:white;
-    margin-top: 50px;
-  
-    
-   
-   
-    
-  }
   
   
   
+}
+
+.login_div{
+  padding:20px;
+}
+.company_name_div {
+  width: 300px;
+  /* background: rgb(3,168,119);
+  background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%); */
+  background-color: #3A4857;
   
-  .avatarStyle{
-    background: rgb(3,168,119) !important;
-    background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%) !important;
-    margin-Top: 20px !important;
-  }
-    
+}
+.password{
+  margin-bottom: -20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: rgb(80, 79, 79);
+}
+.username{
+ /* margin-bottom: -20px; */
+ margin-top: 20px;
+ margin-left: 20px;
+ color: rgb(80, 79, 79);
+}
+.text1{
+  color: rgb(80, 79, 79);
+  font-size: 15px;
+  margin-top: 80px;
+}
+.textlast{
+  color: rgb(80, 79, 79) ;
+  font-size: 15px;
+  float: right;
+ margin-bottom: -20px;
+ margin-top: 25px;
+ margin-right: -15px;
+}
+.text1sub{
+  color: rgb(131, 129, 129);
+}
+.que{
+  color: gray;
+}
+.create{
+  color: gray;
+}
+.keyicon{
+  margin-bottom: 10px;
+}
+.green{
+ background-color: #5C992F;
+ height: 100vh;
+}
+.personicon{
+  margin-bottom: 10px;
+}
+.quecreate{
+  float: right;
+  margin-top: -15px;
+}
+.continueBtn{
+/* background: rgb(3,168,119) ;
+  background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%) ; */
+  padding: 10px 60px !important;
+  cursor: pointer;
+  /* border-radius: 30px !important; */
+  background-color: #000 !important;
+  opacity: 70%;
   
-  .txtBox{
-   padding: 150px 0px ;
-   text-align: center;
-   
-   color:white;
-   
-   
   
-   
-   
-   
-  }
-
-
-  .txtBox1{
-    
-    text-align: center;
-    
-    color:white;
-    }
-  .txtAuto{
-    width: 100%;
-  }        
+ 
+ 
   
-  .usernameTxt{
-    width: 325px;
-    margin-top: 50px !important;
-    margin-right: 300px !important;
-    margin-left:50px !important;
-    
+}
+.signinbutton{
+  margin-left: 20px;
+}
+
+
+
+.avatarStyle{
+  background: rgb(3,168,119) !important;
+  background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%) !important;
+  margin-Top: 20px !important;
+}
+  
+
+
+ 
+ 
+
+ .txtBox{
+ padding: 150px 0px ;
+ text-align: center;
+ margin-top: -185px;
+ color:white;
+ 
+ 
+}
+.carpic{
+ margin-left: 110px;
+ margin-top: 80px;
+ margin-bottom: -20px;
+}
+
+.txtBox2{
+ text-align: center;
+ color:white;
+ margin-top: -100px;
+ margin-bottom: 80px;
+ font-size: 15px;
+
+ 
+ 
+}
+.txtBox3{
+ color: white;
+ margin-top: 150px;
+}
+.txtAuto{
+  width: 100%;
+}        
+
+.usernameTxt{
+  width: 325px;
+  margin-top: 15px !important;
+  
+}
+ .MuiInput-formControl{
+  margin-top:22px !important ;
+}
+
+
+
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
+}
 
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
 
+.App-link {
+  color: #61dafb;
+}
 
-  .Account{
-      margin-left: 300px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .cmauto{
-    margin-right: 300px !important;
-    margin-top: 100px;
-    margin-left: 0px;
-
+  to {
+    transform: rotate(360deg);
   }
+}
+@media  screen and (max-width: 1090px) {
+ .company_name_div {
+display: none;
 
-  .cmauto1{}
-  .gg{
-    margin-top: 20px !important;
-    margin-right: 300px !important;
-    margin-left:50px !important;
-  }
+
+ 
+ }
+.login_div{
+ width: 20%;
+margin: 10px auto;
+}
+}

@@ -4,40 +4,36 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import {
-  PermIdentity
-} from "@material-ui/icons";
 import './sidebar.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LogoutIcon from '@mui/icons-material/Logout';
-import ReportIcon from '@mui/icons-material/Report';
-import { Button } from "@material-ui/core";
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import FeaturedInfo from '../Featuredinfo/Featuredinfo';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import HomeSharpIcon from '@material-ui/icons/HomeSharp';
 import GroupIcon from '@material-ui/icons/Group';
 import InsertDriveFileSharpIcon from '@material-ui/icons/InsertDriveFileSharp';
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  backgroundColor:'lightgrey',
+ 
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
+ 
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(40),
     width: 'auto',
+    
+    
+    
   },
 }));
 
@@ -49,6 +45,10 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  color:'white',
+  
+  
+  
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -59,8 +59,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    color:'honeydew;',
     [theme.breakpoints.up('md')]: {
       width: '20ch',
+      
+      
+
       
     },
   },
@@ -71,11 +75,11 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-  marginLeft: 15,
+  marginLeft: 300,
   marginTop:2,
   height:400,
   borderRadius:10,
-  width:1050,
+  width:1125,
   
 }));
 
@@ -95,11 +99,15 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+  
+
     
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor:'whitesmoke'
+    backgroundColor:'whitesmoke',
+    
+
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
@@ -110,9 +118,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor:'whitesmoke'
   },
 }));
-const logouticon ={ transform: 'rotate(180deg)'}
+
 export default function Sidebar() {
   const classes = useStyles();
+  const navigate = useNavigate();
+
+  function Logout(){
+    sessionStorage.clear();
+    navigate("/");
+   } 
   
 
 
@@ -128,14 +142,15 @@ export default function Sidebar() {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Search...."
+              
               inputProps={{ 'aria-label': 'search' }}
               
             />
           </Search>
           <div className='accountcircle'>
           
-          <AccountCircle fontSize="large" /><h3 className='admin'>Admin</h3>
+          <img  src="admin.png" className='Adminicon' /><h3 className='admin'>Admin</h3>
           </div>
 
           
@@ -148,9 +163,10 @@ export default function Sidebar() {
           paper: classes.drawerPaper,
         }}
         anchor="left"
+        className="drawer"
       >
         <div className={classes.toolbar}>
-       <h1> C.M AUTO  </h1> 
+       <h1 className='Heading'> C.M AUTO  </h1> 
         </div>
         
             
@@ -173,8 +189,7 @@ export default function Sidebar() {
               </li>
 
               <li className="sidebarListItem">
-              
-                <MonetizationOnIcon className="sidebarIcon" />
+              <img src="rupees.png" className="rupeesimg"/>
                   <h3 className="sidebaritem3">Sales</h3> 
               </li>
 
@@ -183,24 +198,29 @@ export default function Sidebar() {
                 <h3 className="sidebaritem4">Report</h3> 
               </li>
 
-              
-              <h1>Account Page</h1>
-              <li className="sidebarListItemLogout" >        
+              <div>
+              <h1 className='AccountPage'>Account Page</h1>
+              </div>
+          
+
+              <div className="sidebarListItemLogout"  onClick={Logout}>        
              
-               <LogoutIcon  className="btnTxt1"   style={logouticon}/>
-                <h3 className="btnTxt">Logout</h3>
+              <img src="logouticon.png" className="logoutimg" />
+                <h3 className="btnTxt">Sign out</h3>
             
-            </li>
-
-
-      </Drawer>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
+            </div>
+        <div >
+        <h3 className='version'>Version 1.0</h3>
+        </div>
         
+      </Drawer>
+      {/* <main className={classes.content}> */}
+        {/* <div className={classes.toolbar} /> */}
+       <div>
 
-      <div className='dotdiv'>
+        <div className='dotdiv'>
       <span className='greendot'></span>
-      <span className='todayscollection'> Today's Collection</span> 
+      <span className='todayscollection'>Today's Collection</span> 
       </div>
         
         <div className='reddiv'>
@@ -208,15 +228,17 @@ export default function Sidebar() {
         </div>
 
          <div className='bluediv'>
-         <span className='bluedot'></span><span>Sales</span> 
+         <span className='bluedot'></span><span className='sales'>Sales</span> 
            </div> 
          
          <div className='lastdiv'>
-         <span className='lastdot'></span>   <span>NewCutomer</span>
+         <span className='lastdot'></span>   <span className='newcustomer'>NewCutomer</span>
          </div>
+
+        
            
        
-        <FeaturedInfo/>
+         <FeaturedInfo/>
         <Grid container color ="blue" spacing={2}>
   <Grid item xs={12}>
   <Item></Item>
@@ -224,7 +246,9 @@ export default function Sidebar() {
   
   
 </Grid>
-      </main>
+</div>
+      {/* </main> */}
     </div>
+    
   );
 }
