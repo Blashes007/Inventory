@@ -7,8 +7,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
 import './sidebar.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import FeaturedInfo from '../Featuredinfo/Featuredinfo';
 import Paper from '@mui/material/Paper';
+import FeaturedInfo from '../Featuredinfo/Featuredinfo';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
@@ -16,7 +16,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import HomeSharpIcon from '@material-ui/icons/HomeSharp';
 import GroupIcon from '@material-ui/icons/Group';
 import InsertDriveFileSharpIcon from '@material-ui/icons/InsertDriveFileSharp';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 
 
 
@@ -106,6 +108,7 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
     backgroundColor:'whitesmoke',
+    flex: 1,
     
 
   },
@@ -163,7 +166,8 @@ export default function Sidebar() {
           paper: classes.drawerPaper,
         }}
         anchor="left"
-        className="drawer"
+        className="sidebar"
+        
       >
         <div className={classes.toolbar}>
        <h1 className='Heading'> C.M AUTO  </h1> 
@@ -172,16 +176,20 @@ export default function Sidebar() {
             
           
         <Divider />
-        
+
+              <Link to="/Dashboard" className="sidebarComponents">
               <li className="sidebarListItem" >
                 <HomeSharpIcon className="sidebarIcon" />
                 <h3 className="sidebaritem1" >Dashboard</h3> 
               </li>
+              </Link>
 
+              <Link to="/Customers" className="sidebarComponents">
               <li className="sidebarListItem" >
                 <GroupIcon className="sidebarIcon" />
                 <h3 className="sidebaritemm" >Customer</h3>
               </li>
+              </Link>
 
               <li className="sidebarListItem">
                 <ShoppingCartIcon className="sidebarIcon" />
@@ -209,14 +217,14 @@ export default function Sidebar() {
                 <h3 className="btnTxt">Sign out</h3>
             
             </div>
-        <div >
+        <div className='version1'>
         <h3 className='version'>Version 1.0</h3>
         </div>
         
       </Drawer>
       {/* <main className={classes.content}> */}
         {/* <div className={classes.toolbar} /> */}
-       <div>
+       {/* <div>
 
         <div className='dotdiv'>
       <span className='greendot'></span>
@@ -246,7 +254,7 @@ export default function Sidebar() {
   
   
 </Grid>
-</div>
+</div> */}
       {/* </main> */}
     </div>
     

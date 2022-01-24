@@ -1,0 +1,96 @@
+.gg{
+    flex: 4;
+}
+.dotdiv{
+    margin-top: 100px;
+   
+    font-size: 15px;
+  }
+  
+  .greendot{
+    
+    padding:2px 10px;
+    margin-left:400px;
+    background-color:limegreen;
+    
+  }
+  .todayscollection{
+    margin-top: 100px;
+    margin-left:10px;
+  }
+  
+  
+  .reddiv{
+   
+    margin-right: 300px;
+    margin-top: -20px;
+    font-size: 15px;
+  
+  }
+  
+  .reddot{
+    padding:2px 10px;
+    margin-left: 580px;
+    background-color:red;
+   
+    
+  }
+  
+  
+  .bluediv{
+    margin-left: 100px;
+    margin-top: -20px;
+    font-size: 15px;
+  
+  }
+  
+  .bluedot{
+    
+    padding:2px 10px;
+    margin-left: 600px;
+    background-color:blue;
+    
+  }
+  
+  
+  
+  .lastdot{
+    padding:2px 10px;
+    margin-left: 700px;
+    background-color:#067A7A
+    
+  }
+  
+  
+  
+  
+  .lastdiv{
+    margin-left: 100px;
+    margin-top: -20px;
+    font-size: 15px;
+  
+  }
+
+  
+.newcustomer{
+    margin-top: 100px;
+    margin-left:10px;
+  
+  }
+
+  .purchase{
+    margin-top: 100px;
+    margin-left:10px;
+  
+  }
+  
+  .sales{
+    margin-top: 100px;
+    margin-left:10px;
+  
+  }
+
+  .todayscollection{
+    margin-top: 100px;
+    margin-left:10px;
+  }

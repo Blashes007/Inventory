@@ -110,7 +110,7 @@ export default function Loginpage() {
           
           <Grid container spacing={0}>
           <Grid className="company_name_div" item xs>
-            <div className="carpic"><img src="car.png"/></div>
+            <div className="carpic"><img src="carlogo.png"/></div>
               <div className="txtBox">
                 <h1>C.M AUTO</h1>
                 <h4>Customer Management System</h4>

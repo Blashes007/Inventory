@@ -148,7 +148,6 @@
 }
 .btnTxt{
   color:black;
-  height:80px;
   width:80px;
   margin-left: 100px;
   margin-top: -40px;
@@ -187,12 +186,16 @@ img{
   margin-top: -1px;
   
 }
-.version{
-  color: #ffffff;
-  text-align: right;
-  margin-top: -25px;
+
+
+.version1{
   
+  text-align: right;
+  margin-top: 60px;
 }
+
+
+
 .purchasecomponents{
   background: rgb(15,111,111);
 background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
@@ -378,5 +381,13 @@ background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100
   -webkit-box-shadow: 0px 0px 15px -10px rgba(202, 35, 35, 0.75);
   box-shadow: 100px 10px 20px -10px rgba(155, 19, 19, 0.75);
  
+
+}
+
+.sidebarComponents{
+  text-decoration: none;
+  font-size: 16px;
+  color:black;
+  
 
 }

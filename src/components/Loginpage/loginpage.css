@@ -1,5 +1,5 @@
 .box_div{
-  min-width: 350px;
+  min-width: 50px;
   /* margin: auto;  */
   position: absolute;
   top: 50%;
@@ -15,7 +15,7 @@
   padding:20px;
 }
 .company_name_div {
-  width: 300px;
+  width: 500px;
   /* background: rgb(3,168,119);
   background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%); */
   background-color: #3A4857;
