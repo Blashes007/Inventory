@@ -94,3 +94,8 @@
     margin-top: 100px;
     margin-left:10px;
   }
+
+  .grid{
+   margin-right: 500px;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.75);
+  }

@@ -72,7 +72,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const btnstyle = { marginTop: "50px", marginLeft: "1100px" };
+// const btnstyle = { marginTop: "50px", marginLeft: "1100px", backgroundColor:'#727171',  };
+const btnstyle = { marginTop: "5%", marginLeft: "93%", backgroundColor:'#727171',  };
 const style = {
   position: "absolute",
   top: "50%",
@@ -89,7 +90,7 @@ const style = {
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: '#727171',
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -372,7 +373,6 @@ function Customers() {
         }}
         style={btnstyle}
         variant="contained"
-        color="primary"
         id="myBtn"
         required
       >
@@ -382,7 +382,7 @@ function Customers() {
 
       <div className='userListUser'>
            <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <Table sx={{ minWidth: 1110 }} aria-label="simple table">
                 <TableHead>
                 
                     

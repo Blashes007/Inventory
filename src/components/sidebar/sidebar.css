@@ -1,6 +1,6 @@
-
+/* 
 .sidebar {
-  flex: 1;
+  flex: 5;
   height:100vh;
 
   position: sticky;
@@ -8,7 +8,9 @@
   background: rgb(15,111,111);
   background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
   
-}
+} */
+
+
 .sidebarWrapper {
   
   color: #555;
@@ -40,36 +42,42 @@
 } */
 
 .sidebarListItem {
-  padding: 1px;
+  padding: 3%;
   cursor: pointer;
   display: flex;
   align-items: center;
   border-radius: 10px;
-  margin-top: 5px;
+  margin-top: 3%;
   
 }
 
 
 .sidebarListItem:hover  {
-  background-color: rgb(166, 166, 173);
+  background-color: #727171
 }
 .sidebaritem1{
-  margin-left: 10px;
+  margin-left: 5%;
+  font-size: 20px;
+  /* font-weight: 10% !important; */
   
   
 }
 .sidebaritemm{
-  margin-left: 10px;
+  margin-left: 5%;
+  font-size: 20px;
 }
 .sidebaritem2{
-  margin-left: 10px;
+  margin-left: 5%;
+  font-size: 20px;
 }
 .sidebaritem3{
   /* margin-right: 100px; */
-  margin-left: 15px;
+  margin-left: 7%;
+  font-size: 20px;
 }
 .sidebaritem4{
-  margin-left: 10px;
+  margin-left: 5%;
+  font-size: 20px;
 }
 
 .sidebarIcon{
@@ -79,78 +87,86 @@
     background-color: white;
     border-radius: 10px;
     margin-left: 50px;
-  
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
     
+}
+.customersimg{
+  height:40px;
+  width:40px;
+  margin-left: 50px;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
 }
 .rupeesimg{
   height:40px;
   width:40px;
   margin-left: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
 
 }
 
 
 .sidebarListItemLogout{
-  padding: 1px;
+  padding: 3%;
   cursor: pointer;
  
     align-items: center;
   border-radius: 10px;
-  margin-top: 5px;
   
-
-/*  
-  cursor: pointer;
-
-  margin-top: -10px;
-  margin-left: 55px;
- 
-  cursor: pointer;
   display: flex;
-  align-items: center; */
-  
-  
 
-  
-  
 
 }
 
 .sidebarListItemLogout:hover  {
-  background-color: rgb(166, 166, 173);
+  background-color: #727171
  
 
 }
 .logoutimg{
-  /* height:42px;
-  width: 42px;
-  margin-top:-50px;
-  margin-left: 50px;
-  padding:1px 2px;
-  border-radius: 10px; */
-  margin-top:0px;
+  
+  margin-top:0%;
   margin-left: 50px;
 
 
-    font-size: 40px !important;
-    /* padding:1px 5px ; */
+    /* font-size: 10px !important; */
+    padding:1px 6px ;
     background-color: white;
     border-radius: 10px;
-    
-    height:42px;
-  width: 42px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
+    height:41px;
+  width: 41px;
  
   
 }
 
 .AccountPage{
-  margin-left: 20px;
+  
+font-size: 180% !important;
+margin-top: 6% !important;
+font-weight: 700;
+font-family: Secular One;
+  
+
+  
+ 
 }
+.AccountPage1{
+  margin-left: 20% !important;
+  color: #727171;
+
+ 
+}
+
 .btnTxt{
   color:black;
-  width:80px;
-  margin-left: 100px;
-  margin-top: -40px;
+margin-top: 2%;
+  
+  margin-left: 5%;
+  font-size: 20px;
+
+
   
 }
 .btnTxt1{
@@ -188,11 +204,6 @@ img{
 }
 
 
-.version1{
-  
-  text-align: right;
-  margin-top: 60px;
-}
 
 
 
@@ -311,14 +322,17 @@ background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100
 
 .search{
   /* margin-left: 400px !important; */
-  margin-top: 40px;
-  background-color: rgb(148, 148, 155);
-
-  
+  margin-top: 3%;
+  background-color: #727171; 
 }
+
 .dashboard{
   /* margin-right: 0px !important; */
-  margin-top: 80px !important;
+  margin-top: 6% !important;
+  color: #727171;
+  font-family: Secular One;
+  font-size:28px ;
+  
 }
 .purchase{
   margin-top: 100px;
@@ -338,51 +352,60 @@ background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100
 
 }
 .Adminicon{
-  margin-top:0px;
-  margin-left: 350px;
-  height:45px;
-  width:45px;
+
+  margin-left: 350%;
+  height:45%;
+  width:45%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75);
+
 }
 .admin{
-  margin-top:-40px;
-  margin-left: 400px;
-  font-size: 20px;
-  color:grey;
-
+  margin-top:-40%;
+  margin-left: 402%;
+  font-size: 22px;
+  font-family: Secular One;
+  color: #727171;
+ 
 }
 .accountcircle{
   margin-top:38px;
   
 }
 
+
+.version1{
+  
+  
+  margin-top: 45% !important;
+ }
+
 .version{
   
+  font-family: Secular One;
+  color: #727171;
   
-  color:grey;
-   margin-top: 125px !important;
-    margin-left: -50px !important;
-    font-size: 20px !important;
-    font-weight: 100px !important;
+    font-size: 25px !important;
     text-align: center;
+    
 }
-.AccountPage{
-  color:grey;
-  font-size: 20px;
-  margin-left: 50px !important;
 
-
-}
 
 .Heading{
-  margin-left: 50px;
-  color:grey;
+  margin-left: 21%;
+  color:#727171;
+  font-family: Secular One;
+ 
 }
-.drawer{
+.divider{
+  margin-top: 300px !important;
+}
+/* .drawer{
   -webkit-box-shadow: 0px 0px 15px -10px rgba(202, 35, 35, 0.75);
   box-shadow: 100px 10px 20px -10px rgba(155, 19, 19, 0.75);
  
 
-}
+} */
 
 .sidebarComponents{
   text-decoration: none;
@@ -390,4 +413,19 @@ background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100
   color:black;
   
 
+}
+
+.purchasecomponents{
+  background: rgb(15,111,111);
+background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+margin-left: 300px;
+margin-top: 100px;
+  position: absolute;
+  
+  
+}
+
+.button{
+  margin-left: 300px;
+  margin-top: 100px;
 }

@@ -16,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
     height:400,
     borderRadius:10,
     width:1125,
-    
+    boxShadow:'0px 0px 20px -6px rgba(0, 0, 0, 0.75)',
   }));
 
 function Container() {
@@ -40,7 +40,7 @@ function Container() {
      </div> 
    
    <div className='lastdiv'>
-   <span className='lastdot'></span>   <span className='newcustomer'>NewCutomer</span>
+   <span className='lastdot'></span>   <span className='newcustomer'>New Cutomer</span>
    </div>
 
   

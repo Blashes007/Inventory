@@ -18,10 +18,11 @@ import GroupIcon from '@material-ui/icons/Group';
 import InsertDriveFileSharpIcon from '@material-ui/icons/InsertDriveFileSharp';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
+import { ButtonGroup } from "@material-ui/core";
 
 
-
-
+const error ={ display:'none'};
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -109,6 +110,7 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
     backgroundColor:'whitesmoke',
     flex: 1,
+boxShadow: ' 6px 0px 20px -6px rgba(0, 0, 0, 0.75)',
     
 
   },
@@ -126,10 +128,34 @@ export default function Sidebar() {
   const classes = useStyles();
   const navigate = useNavigate();
 
+  const buttons = [
+    <div  id="comp">
+    <Button     key="one">Cash Purchase</Button>,
+    <Divider variant="full" color="white"/>,
+    <Button key="two">Credit Purchase</Button>,
+   
+    </div>
+  ];
+
+
+
   function Logout(){
     sessionStorage.clear();
     navigate("/");
    } 
+
+
+   function Purchases()
+{
+  if(document.getElementById('error').style.display==="none")
+  document.getElementById('error').style.display = 'block';
+  else
+  document.getElementById('error').style.display = 'none';
+  
+
+
+}
+
   
 
 
@@ -144,7 +170,7 @@ export default function Sidebar() {
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
-            <StyledInputBase
+            <StyledInputBase className="searchcolor"
               placeholder="Search...."
               
               inputProps={{ 'aria-label': 'search' }}
@@ -160,7 +186,7 @@ export default function Sidebar() {
         </Toolbar>
       </AppBar>
       <Drawer
-        className={classes.drawer}
+        // className={classes.drawer}
         variant="permanent"
         classes={{
           paper: classes.drawerPaper,
@@ -174,49 +200,60 @@ export default function Sidebar() {
         </div>
         
             
-          
+          <div classsName="divider" >
         <Divider />
+        </div>
 
               <Link to="/Dashboard" className="sidebarComponents">
               <li className="sidebarListItem" >
                 <HomeSharpIcon className="sidebarIcon" />
-                <h3 className="sidebaritem1" >Dashboard</h3> 
+                <span className="sidebaritem1" >Dashboard</span> 
               </li>
               </Link>
 
               <Link to="/Customers" className="sidebarComponents">
               <li className="sidebarListItem" >
-                <GroupIcon className="sidebarIcon" />
-                <h3 className="sidebaritemm" >Customer</h3>
+              <img src="Customers.png" className="customersimg"/> 
+                <span className="sidebaritemm" >Customer</span>
               </li>
               </Link>
 
+              <Link to="/Purchase" className="sidebarComponents">
               <li className="sidebarListItem">
                 <ShoppingCartIcon className="sidebarIcon" />
-                  <h3 className="sidebaritem2">Purchase</h3>
+                  <span className="sidebaritem2">Purchase</span>
               </li>
+              </Link>
+              <ButtonGroup id="error" style={error} fullWidth className="purchasecomponents"
+              orientation="vertical"  onMouseEnter={Purchases} onMouseLeave={Purchases}
+                >
+              {buttons}
+            </ButtonGroup >
+   
 
+              <Link to="/Sales" className="sidebarComponents">
               <li className="sidebarListItem">
               <img src="rupees.png" className="rupeesimg"/>
-                  <h3 className="sidebaritem3">Sales</h3> 
+                  <span className="sidebaritem3">Sales</span> 
               </li>
-
+              </Link>
               <li className="sidebarListItem">
                 <InsertDriveFileSharpIcon className="sidebarIcon" />
-                <h3 className="sidebaritem4">Report</h3> 
+                <span className="sidebaritem4">Report</span> 
               </li>
 
-              <div>
-              <h1 className='AccountPage'>Account Page</h1>
+              <div className='AccountPage1'>
+              <h1 className='AccountPage' >Account Page</h1>
               </div>
           
 
-              <div className="sidebarListItemLogout"  onClick={Logout}>        
+              <li className="sidebarListItemLogout"  onClick={Logout}>        
              
               <img src="logouticon.png" className="logoutimg" />
-                <h3 className="btnTxt">Sign out</h3>
+              <span className="btnTxt">Sign out</span>
             
-            </div>
+            </li>
+            
         <div className='version1'>
         <h3 className='version'>Version 1.0</h3>
         </div>

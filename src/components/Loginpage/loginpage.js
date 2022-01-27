@@ -11,14 +11,15 @@ import PersonIcon from '@mui/icons-material/Person';
 import KeyIcon from '@mui/icons-material/Key';
 import { Alert } from "@material-ui/lab";
 import LinearWithValueLabel from "./progress";
-
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputAdornment from '@mui/material/InputAdornment';
 
 const paperStyle = { margin: "0px auto", border: "none" };
 const divstyle = { marginTop: "20px" };
 const btnstyle = { marginTop: "50px", color: "white" };
 const popup = { position: "absolute", right: "5px", top: "10px" };
-const popup1 = { display: "none", color: "green" };
-const popup2 = { display: "none", color: "red" };
+const popup1 = { display: "none", color: "white" };
+const popup2 = { display: "none", color: "white" };
 const centercontent = { textAlign: "center" };
 const container = { height: "500px", overflow: "hidden" };
 var CryptoJS = require("crypto-js");
@@ -37,6 +38,7 @@ export default function Loginpage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   var handleKeypress = (e) => {
     //it triggers by pressing the enter key
     if (e.code === "Enter") {
@@ -44,6 +46,29 @@ export default function Loginpage() {
       Login();
     }
   };
+
+
+  function validate(){
+    document.getElementById("errorusername").style.display="none";
+    document.getElementById('errorpassword').style.display='none';
+    if (username == "" || password == "")
+    {
+      if(username == "")
+      {
+        document.getElementById('errorusername').style.display='block';
+        document.getElementById('errorusername').innerHTML ="Username is required"
+      }
+      if(password == "")
+      {
+        document.getElementById('errorpassword').style.display='block';
+        document.getElementById('errorpassword').innerHTML ="Password is required"
+      }
+      setDisable(false);
+    }
+
+    else 
+    Login();
+};
   const [disable, setDisable] = React.useState(false);
 
   async function Login() {
@@ -98,6 +123,132 @@ export default function Loginpage() {
 
  
     return (
+      // <div className="green">
+      // <div>
+        
+      //   <Paper
+      //     className="box_div"
+      //     elevation={15}
+      //     style={container}
+      //     style={paperStyle}
+      //   >
+          
+      //     <Grid container spacing={0}>
+      //     <Grid className="company_name_div" item xs>
+      //       <div className="carpic"><img src="carlogo.png"/></div>
+      //         <div className="txtBox">
+      //           <h1>C.M AUTO</h1>
+      //           <h4>Customer Management System</h4>
+      //         </div>
+      //         <div className="txtBox2">
+      //           <p>A Powerful & easy</p>
+      //           <p>to use Application</p>
+      //           <p>for Managing customer Details </p>
+      //         </div>
+      //         <div className="txtBox3">
+      //           <p>version 1.0</p>
+      //         </div>
+      //       </Grid>
+      //       <Grid className="login_div" item xs>
+             
+  
+      //         <div className="quecreate">
+      //           <p className="que">Don't have account? <button className="create">CREATE ACCOUNT</button></p>
+               
+      //         </div>
+      //         <div className="text1">
+      //           <h2>Log into CM AUTO</h2>
+      //           <p className="text1sub">Enter your login details below</p>
+      //         </div>
+      //         <div>
+      //         <h4 className="username">USERNAME</h4>
+      //         </div>
+              
+      //         <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+      //           <div className="personicon"><PersonIcon fontSize="small" /></div>
+              
+              
+      //           <TextField
+                
+               
+  
+                
+      //           className="usernameTxt" variant="outlined" type="Username"
+                
+                
+      //             onChange={(e) => setUsername(e.target.value)}
+      //             fullWidthrequired
+      //           />
+      //         </Box>
+      //         <div className="password">
+      //         <h4>PASSWORD</h4>
+      //         </div>
+              
+      //         <Box
+      //           style={divstyle}
+      //           sx={{ display: "flex", alignItems: "flex-end" }}
+      //         >
+      //           <div className="keyicon"><KeyIcon fontSize="small" /></div>
+                
+      //           <TextField
+               
+      //           className="usernameTxt"
+                  
+      //             placeholder="Password"
+      //             variant="outlined"
+      //             type="password"
+      //             onChange={(e) => setPassword(e.target.value)}
+      //             onKeyPress={handleKeypress}
+  
+      //             fullWidth
+      //             // required
+      //           />
+      //         </Box>
+              
+      //         <div className="signinbutton" >
+              
+      //           <Button
+                 
+      //             style={btnstyle}
+      //             className="continueBtn"
+      //             variant="contained"
+      //             id="myBtn"
+      //             required
+      //             disabled={disable} onClick={() => {setDisable(true); Login();}}
+                  
+                 
+      //           >
+      //             <p>SIGN IN</p>
+             
+      //           </Button>
+      //           <div className="textlast">
+      //           <p>Designed & created by I.O Technology</p> 
+      //           </div>
+               
+      //         </div>
+             
+      //       </Grid>
+           
+      //     </Grid>
+      //   </Paper>
+  
+      //   <div style={popup}>
+      //     <div id="successlogin" style={popup1}>
+      //       <Alert variant="filled" severity="success">
+      //         <LinearWithValueLabel />
+      //         Logged In Sucessfully!
+      //       </Alert>
+      //     </div>
+      //     <div id="failedlogin" style={popup2}>
+      //       <Alert variant="filled" severity="error">
+      //         Authentication failed. Please check Username and Password{" "}
+      //         <LinearWithValueLabel />
+      //       </Alert>
+      //     </div>
+      //   </div>
+      // </div>
+      // </div>
+
       <div className="green">
       <div>
         
@@ -125,11 +276,8 @@ export default function Loginpage() {
               </div>
             </Grid>
             <Grid className="login_div" item xs>
-             
-  
               <div className="quecreate">
                 <p className="que">Don't have account? <button className="create">CREATE ACCOUNT</button></p>
-               
               </div>
               <div className="text1">
                 <h2>Log into CM AUTO</h2>
@@ -140,82 +288,67 @@ export default function Loginpage() {
               </div>
               
               <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-                <div className="personicon"><PersonIcon fontSize="small" /></div>
-              
-              
-                <TextField
-                
-               
-  
-                
-                className="usernameTxt" variant="outlined" type="Username"
-                
-                
-                  onChange={(e) => setUsername(e.target.value)}
-                  fullWidthrequired
-                />
+            <OutlinedInput 
+              className="usernameTxt" variant="outlined" type="Username"
+              onChange={(e) => setUsername(e.target.value)}
+              id="usernameid"
+              fullWidthrequired
+              startAdornment={
+                <InputAdornment className="txtbackground" position="start">
+                 <div className="personicon"><PersonIcon fontSize="small" /></div>
+                </InputAdornment>
+              }
+            />
+           
               </Box>
+              <span id="errorusername" className="errortext"></span>
               <div className="password">
               <h4>PASSWORD</h4>
               </div>
-              
               <Box
                 style={divstyle}
                 sx={{ display: "flex", alignItems: "flex-end" }}
               >
-                <div className="keyicon"><KeyIcon fontSize="small" /></div>
-                
-                <TextField
-               
-                className="usernameTxt"
-                  
-                  placeholder="Password"
-                  variant="outlined"
-                  type="password"
-                  onChange={(e) => setPassword(e.target.value)}
-                  onKeyPress={handleKeypress}
-  
-                  fullWidth
-                  // required
-                />
+                <OutlinedInput
+              className="usernameTxt custominput" variant="outlined" type="password"
+              onChange={(e) => setPassword(e.target.value)}
+              fullWidthrequired
+              onKeyPress={handleKeypress}
+              startAdornment={
+                <InputAdornment className="txtbackground" position="start">
+                 <div className="keyicon"><KeyIcon fontSize="small" /></div>
+                </InputAdornment>
+              }
+            />
               </Box>
-              
+              <span id="errorpassword" className="errortext"></span>
               <div className="signinbutton" >
-              
-                <Button
-                 
+                <Button 
                   style={btnstyle}
                   className="continueBtn"
                   variant="contained"
                   id="myBtn"
                   required
-                  disabled={disable} onClick={() => {setDisable(true); Login();}}
-                  
-                 
+                  disabled={disable} onClick={() => {setDisable(true);  validate();}}              
                 >
                   <p>SIGN IN</p>
-             
                 </Button>
                 <div className="textlast">
                 <p>Designed & created by I.O Technology</p> 
                 </div>
-               
               </div>
-             
             </Grid>
-           
           </Grid>
         </Paper>
-  
         <div style={popup}>
           <div id="successlogin" style={popup1}>
-            <Alert variant="filled" severity="success">
+            <Alert variant="outlined" severity="success">
               <LinearWithValueLabel />
               Logged In Sucessfully!
             </Alert>
           </div>
           <div id="failedlogin" style={popup2}>
-            <Alert variant="filled" severity="error">
+            <Alert variant="outlined" severity="error">
               Authentication failed. Please check Username and Password{" "}
               <LinearWithValueLabel />
             </Alert>
