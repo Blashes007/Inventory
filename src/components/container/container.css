@@ -1,101 +1,106 @@
 .gg{
-    flex: 4;
+  flex: 4;
 }
+
 .dotdiv{
-    margin-top: 100px;
-   
-    font-size: 15px;
-  }
-  
-  .greendot{
-    
-    padding:2px 10px;
-    margin-left:400px;
-    background-color:limegreen;
-    
-  }
-  .todayscollection{
-    margin-top: 100px;
-    margin-left:10px;
-  }
-  
-  
-  .reddiv{
-   
-    margin-right: 300px;
-    margin-top: -20px;
-    font-size: 15px;
-  
-  }
-  
-  .reddot{
-    padding:2px 10px;
-    margin-left: 580px;
-    background-color:red;
-   
-    
-  }
-  
-  
-  .bluediv{
-    margin-left: 100px;
-    margin-top: -20px;
-    font-size: 15px;
-  
-  }
-  
-  .bluedot{
-    
-    padding:2px 10px;
-    margin-left: 600px;
-    background-color:blue;
-    
-  }
-  
-  
-  
-  .lastdot{
-    padding:2px 10px;
-    margin-left: 700px;
-    background-color:#067A7A
-    
-  }
-  
-  
-  
-  
-  .lastdiv{
-    margin-left: 100px;
-    margin-top: -20px;
-    font-size: 15px;
-  
-  }
+  margin-top: 35%;
+ 
+  font-size: 18px;
+}
 
+.greendot{
   
+  
+  padding:0px 11px;
+  margin-left:-150%;
+  background-color:limegreen;
+  
+  
+}
+.todayscollection{
+  margin-top: 25%;
+  margin-left:10px;
+}
+
+
+.reddiv{
+ 
+  margin-right: 305px;
+  margin-top: -25px;
+  font-size: 18px;
+
+}
+
+.reddot{
+  padding:0px 11px;
+  margin-left: -350%;
+  background-color:red;
+  
+ 
+  
+}
+
+
+.bluediv{
+  
+  margin-top: -25px;
+  font-size: 18px;
+
+}
+
+.bluedot{
+  
+  padding:0px 11px;
+  margin-left: -100%;
+  background-color:blue;
+  
+}
+
+
+
+.lastdot{
+  padding:0px 11px;
+  margin-left: -50%;
+  background-color:#067A7A
+  
+}
+
+
+
+
+.lastdiv{
+  
+  margin-top: -25px;
+  font-size: 18px;
+
+}
+
+
 .newcustomer{
-    margin-top: 100px;
-    margin-left:10px;
-  
-  }
+  margin-top: 8%;
+ 
 
-  .purchase{
-    margin-top: 100px;
-    margin-left:10px;
-  
-  }
-  
-  .sales{
-    margin-top: 100px;
-    margin-left:10px;
-  
-  }
+}
 
-  .todayscollection{
-    margin-top: 100px;
-    margin-left:10px;
-  }
+.purchase{
+  margin-top: 100px;
+  margin-left:10px;
 
-  .grid{
-   margin-right: 500px;
-    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.75);
-  }
+}
+
+.sales{
+  margin-top: 100px;
+  margin-left:10px;
+
+}
+
+.todayscollection{
+  margin-top: 100px;
+  margin-left:10px;
+}
+
+/* .whitesmoke{
+ background-color: whitesmoke;
+} */
+
+  

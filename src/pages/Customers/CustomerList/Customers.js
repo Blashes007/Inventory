@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // const btnstyle = { marginTop: "50px", marginLeft: "1100px", backgroundColor:'#727171',  };
-const btnstyle = { marginTop: "5%", marginLeft: "93%", backgroundColor:'#727171',  };
+const btnstyle = { marginTop: "5%", marginLeft: "86%", backgroundColor:'#727171',  };
 const style = {
   position: "absolute",
   top: "50%",
@@ -382,10 +382,10 @@ function Customers() {
 
       <div className='userListUser'>
            <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 1110 }} aria-label="simple table">
+              <Table sx={{ minWidth: 780}} aria-label="simple table">
                 <TableHead>
                 
-                    
+                {/* minWidth: 760 */}
                     <TableRow>
                    
                       <StyledTableCell align="right">Name</StyledTableCell>

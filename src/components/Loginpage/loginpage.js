@@ -123,6 +123,115 @@ export default function Loginpage() {
 
  
     return (
+
+      <div className="green">
+    <div>
+      
+      <Paper
+        className="box_div"
+        elevation={15}
+        style={container}
+        style={paperStyle}
+      >
+        
+        <Grid container spacing={0}>
+        <Grid className="company_name_div" item xs>
+          <div className="carpic"><img src="carlogo.png"/></div>
+            <div className="txtBox">
+              <h1>C.M AUTO</h1>
+              <h4>Customer Management System</h4>
+            </div>
+            <div className="txtBox2">
+              <p>A Powerful & easy</p>
+              <p>to use Application</p>
+              <p>for Managing customer Details </p>
+            </div>
+            <div className="txtBox3">
+              <p>version 1.0</p>
+            </div>
+          </Grid>
+          <Grid className="login_div" item xs>
+            <div className="quecreate">
+              <p className="que">Don't have account? <button className="create">CREATE ACCOUNT</button></p>
+            </div>
+            <div className="text1">
+              <h2>Log into CM AUTO</h2>
+              <p className="text1sub">Enter your login details below</p>
+            </div>
+            <div>
+            <h4 className="username">USERNAME</h4>
+            </div>
+            
+            <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+          <OutlinedInput 
+            className="usernameTxt" variant="outlined" type="Username"
+            onChange={(e) => setUsername(e.target.value)}
+            id="usernameid"
+            fullWidthrequired
+            startAdornment={
+              <InputAdornment className="txtbackground" position="start">
+               <div className="personicon"><PersonIcon fontSize="small" /></div>
+              </InputAdornment>
+            }
+          />
+         
+            </Box>
+            <span id="errorusername" className="errortext"></span>
+            <div className="password">
+            <h4>PASSWORD</h4>
+            </div>
+            <Box
+              style={divstyle}
+              sx={{ display: "flex", alignItems: "flex-end" }}
+            >
+              <OutlinedInput onKeyPress={handleKeypress}
+            className="usernameTxt custominput" variant="outlined" type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            fullWidthrequired
+            startAdornment={
+              <InputAdornment className="txtbackground" position="start">
+               <div className="keyicon"><KeyIcon fontSize="small" /></div>
+              </InputAdornment>
+            }
+          />
+            </Box>
+            <span id="errorpassword" className="errortext"></span>
+            <div className="signinbutton" >
+              <Button 
+                style={btnstyle}
+                className="continueBtn"
+                variant="contained"
+                id="myBtn"
+                required
+                disabled={disable} onClick={() => {setDisable(true);  validate();}}              
+              >
+                <p>SIGN IN</p>
+              </Button>
+              <div className="textlast">
+              <p>Designed & created by I.O Technology</p> 
+              </div>
+            </div>
+          </Grid>
+        </Grid>
+      </Paper>
+      <div style={popup} >
+        <div id="successlogin" style={popup1}  >
+          <Alert variant="contained" className="popupsuccess" >
+            <LinearWithValueLabel />
+            Logged In Sucessfully!
+          </Alert>
+        </div>
+        <div id="failedlogin" style={popup2}>
+          <Alert variant="contained" severity="error" className="popupsuccess2">
+            Authentication failed. Please check Username and Password{" "}
+            <LinearWithValueLabel />
+          </Alert>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
       // <div className="green">
       // <div>
         
@@ -249,113 +358,113 @@ export default function Loginpage() {
       // </div>
       // </div>
 
-      <div className="green">
-      <div>
+      // <div className="green">
+      // <div>
         
-        <Paper
-          className="box_div"
-          elevation={15}
-          style={container}
-          style={paperStyle}
-        >
+      //   <Paper
+      //     className="box_div"
+      //     elevation={15}
+      //     style={container}
+      //     style={paperStyle}
+      //   >
           
-          <Grid container spacing={0}>
-          <Grid className="company_name_div" item xs>
-            <div className="carpic"><img src="carlogo.png"/></div>
-              <div className="txtBox">
-                <h1>C.M AUTO</h1>
-                <h4>Customer Management System</h4>
-              </div>
-              <div className="txtBox2">
-                <p>A Powerful & easy</p>
-                <p>to use Application</p>
-                <p>for Managing customer Details </p>
-              </div>
-              <div className="txtBox3">
-                <p>version 1.0</p>
-              </div>
-            </Grid>
-            <Grid className="login_div" item xs>
-              <div className="quecreate">
-                <p className="que">Don't have account? <button className="create">CREATE ACCOUNT</button></p>
-              </div>
-              <div className="text1">
-                <h2>Log into CM AUTO</h2>
-                <p className="text1sub">Enter your login details below</p>
-              </div>
-              <div>
-              <h4 className="username">USERNAME</h4>
-              </div>
+      //     <Grid container spacing={0}>
+      //     <Grid className="company_name_div" item xs>
+      //       <div className="carpic"><img src="carlogo.png"/></div>
+      //         <div className="txtBox">
+      //           <h1>C.M AUTO</h1>
+      //           <h4>Customer Management System</h4>
+      //         </div>
+      //         <div className="txtBox2">
+      //           <p>A Powerful & easy</p>
+      //           <p>to use Application</p>
+      //           <p>for Managing customer Details </p>
+      //         </div>
+      //         <div className="txtBox3">
+      //           <p>version 1.0</p>
+      //         </div>
+      //       </Grid>
+      //       <Grid className="login_div" item xs>
+      //         <div className="quecreate">
+      //           <p className="que">Don't have account? <button className="create">CREATE ACCOUNT</button></p>
+      //         </div>
+      //         <div className="text1">
+      //           <h2>Log into CM AUTO</h2>
+      //           <p className="text1sub">Enter your login details below</p>
+      //         </div>
+      //         <div>
+      //         <h4 className="username">USERNAME</h4>
+      //         </div>
               
-              <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-            <OutlinedInput 
-              className="usernameTxt" variant="outlined" type="Username"
-              onChange={(e) => setUsername(e.target.value)}
-              id="usernameid"
-              fullWidthrequired
-              startAdornment={
-                <InputAdornment className="txtbackground" position="start">
-                 <div className="personicon"><PersonIcon fontSize="small" /></div>
-                </InputAdornment>
-              }
-            />
+      //         <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+      //       <OutlinedInput 
+      //         className="usernameTxt" variant="outlined" type="Username"
+      //         onChange={(e) => setUsername(e.target.value)}
+      //         id="usernameid"
+      //         fullWidthrequired
+      //         startAdornment={
+      //           <InputAdornment className="txtbackground" position="start">
+      //            <div className="personicon"><PersonIcon fontSize="small" /></div>
+      //           </InputAdornment>
+      //         }
+      //       />
            
-              </Box>
-              <span id="errorusername" className="errortext"></span>
-              <div className="password">
-              <h4>PASSWORD</h4>
-              </div>
-              <Box
-                style={divstyle}
-                sx={{ display: "flex", alignItems: "flex-end" }}
-              >
-                <OutlinedInput
-              className="usernameTxt custominput" variant="outlined" type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              fullWidthrequired
-              onKeyPress={handleKeypress}
-              startAdornment={
-                <InputAdornment className="txtbackground" position="start">
-                 <div className="keyicon"><KeyIcon fontSize="small" /></div>
-                </InputAdornment>
-              }
-            />
-              </Box>
-              <span id="errorpassword" className="errortext"></span>
-              <div className="signinbutton" >
-                <Button 
-                  style={btnstyle}
-                  className="continueBtn"
-                  variant="contained"
-                  id="myBtn"
-                  required
-                  disabled={disable} onClick={() => {setDisable(true);  validate();}}              
-                >
-                  <p>SIGN IN</p>
-                </Button>
-                <div className="textlast">
-                <p>Designed & created by I.O Technology</p> 
-                </div>
-              </div>
-            </Grid>
-          </Grid>
-        </Paper>
-        <div style={popup}>
-          <div id="successlogin" style={popup1}>
-            <Alert variant="outlined" severity="success">
-              <LinearWithValueLabel />
-              Logged In Sucessfully!
-            </Alert>
-          </div>
-          <div id="failedlogin" style={popup2}>
-            <Alert variant="outlined" severity="error">
-              Authentication failed. Please check Username and Password{" "}
-              <LinearWithValueLabel />
-            </Alert>
-          </div>
-        </div>
-      </div>
-      </div>
+      //         </Box>
+      //         <span id="errorusername" className="errortext"></span>
+      //         <div className="password">
+      //         <h4>PASSWORD</h4>
+      //         </div>
+      //         <Box
+      //           style={divstyle}
+      //           sx={{ display: "flex", alignItems: "flex-end" }}
+      //         >
+      //           <OutlinedInput
+      //         className="usernameTxt custominput" variant="outlined" type="password"
+      //         onChange={(e) => setPassword(e.target.value)}
+      //         fullWidthrequired
+      //         onKeyPress={handleKeypress}
+      //         startAdornment={
+      //           <InputAdornment className="txtbackground" position="start">
+      //            <div className="keyicon"><KeyIcon fontSize="small" /></div>
+      //           </InputAdornment>
+      //         }
+      //       />
+      //         </Box>
+      //         <span id="errorpassword" className="errortext"></span>
+      //         <div className="signinbutton" >
+      //           <Button 
+      //             style={btnstyle}
+      //             className="continueBtn"
+      //             variant="contained"
+      //             id="myBtn"
+      //             required
+      //             disabled={disable} onClick={() => {setDisable(true);  validate();}}              
+      //           >
+      //             <p>SIGN IN</p>
+      //           </Button>
+      //           <div className="textlast">
+      //           <p>Designed & created by I.O Technology</p> 
+      //           </div>
+      //         </div>
+      //       </Grid>
+      //     </Grid>
+      //   </Paper>
+      //   <div style={popup}>
+      //     <div id="successlogin" style={popup1}>
+      //       <Alert  variant="outlined" severity="success">
+      //         <LinearWithValueLabel />
+      //         <span className="white">Logged In Sucessfully!</span>
+      //       </Alert>
+      //     </div>
+      //     <div id="failedlogin" style={popup2}>
+      //       <Alert   variant="outlined" severity="error">
+      //         <span className="white">Authentication failed. Please check Username and Password{" "}</span>
+      //         <LinearWithValueLabel />
+      //       </Alert>
+      //     </div>
+      //   </div>
+      // </div>
+      // </div>
     );
 
     }

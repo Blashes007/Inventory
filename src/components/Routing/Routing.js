@@ -39,6 +39,10 @@ function LoadUrl()
       <Container/>
     )
   }
+
+
+  //Customers
+
   if(slug==="/Customers"){
     return(
       <Customers/>
@@ -56,7 +60,19 @@ function LoadUrl()
         <UpdateCustomer/>
       )
     }
-
+    if(slug=="/returnCustomertable"){
+      return(
+        <Customers/>
+      )
+    }
+    if(slug=="/closeCustDetails"){
+      return(
+        <Customers/>
+      )
+    }
+    
+    
+    
 
     //Purchase
 
@@ -86,6 +102,8 @@ function LoadUrl()
   }
 
 
+
+
   //Sales
 
   if(slug=="/Sales"){
@@ -106,26 +124,7 @@ function LoadUrl()
 
 
  
-//   if(slug==="/Saleslist"){
-//     return(
-//       <SalesList/>
-//     )
-//   }
-  // if(slug=="/Repair"){
-  //   return(
-  //     <Repair/>
-  //   )
-  // }
-//   if(slug==="/Report"){
-//     return(
-//       <Report/>
-//     )
-//   }
-  // if(slug=="/Settings"){
-  //   return(
-  //     <Settings/>
-  //   )
-  // }
+
   
 }
 function Test()

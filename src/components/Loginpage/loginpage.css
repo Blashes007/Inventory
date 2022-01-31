@@ -1,6 +1,6 @@
-.box_div{
+/* .box_div{
   min-width: 50px;
-  /* margin: auto;  */
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -16,8 +16,7 @@
 }
 .company_name_div {
   width: 500px;
-  /* background: rgb(3,168,119);
-  background: linear-gradient(90deg, rgba(3,168,119,1) 2%, rgba(15,111,111,1) 93%); */
+
   background-color: #3A4857;
   
 }
@@ -28,7 +27,7 @@
   color: rgb(80, 79, 79);
 }
 .username{
- /* margin-bottom: -20px; */
+
  margin-top: 20px;
  margin-left: 20px;
  color: rgb(80, 79, 79);
@@ -170,5 +169,141 @@ display: none;
 margin: 10px auto;
 }
 }
+.white{
+  color: white;
+}
+
+ */
+ .box_div{
+  min-width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+.login_div{
+  padding:20px;
+}
+.company_name_div {
+  width: 300px;
+  background-color: #3A4857;
+}
+.popupsuccess{
+  background-color: white !important;
+  color: green !important;
+}
+.popupsuccess2{
+ background-color: white !important;
+ color: red !important;
+}
+.password{
+  margin-bottom: -20px;
+  margin-top: 20px;
+  color: rgb(80, 79, 79);
+}
+.username{
+ margin-top: 20px;
+ color: rgb(80, 79, 79);
+}
+.text1{
+  color: rgb(80, 79, 79);
+  font-size: 15px;
+  margin-top: 80px;
+}
+.textlast{
+  color: rgb(80, 79, 79) ;
+  font-size: 15px;
+ position:absolute;
+ right: 10px;
+ bottom: 5px;
+}
+.text1sub{
+  color: rgb(131, 129, 129);
+}
+.que{
+  color: gray;
+}
+.create{
+  color: gray;
+}
+.keyicon{
+  color: #000;
+  margin-top: 5px;
+}
+.green{
+ background-color: #5C992F;
+ height: 100vh;
+ /* box-shadow: 5px 10px #888888 !important; */
+}
+.personicon{
+ margin-top: 5px;
+  color: #000;
+}
+.quecreate{
+  float: right;
+  margin-top: -15px;
+}
+.continueBtn{
+  padding: 10px 60px !important;
+  cursor: pointer;
+  background-color: #000 !important;
+  opacity: 70%;  
+}
+ .txtBox{
+ padding: 150px 0px ;
+ text-align: center;
+ margin-top: -185px;
+ color:white; 
+ 
+}
+.carpic{
+ margin-left: 90px;
+ margin-top: 100px;
+ margin-bottom: -20px;
+}
 
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+ background-color: white !important;
+}
+.txtBox2{
+ text-align: center;
+ color:white;
+ margin-top: -100px;
+ margin-bottom: 80px;
+ font-size: 15px;
+}
+.txtBox3{
+ color: white;
+ margin-top: 180px;
+ position:relative;
+ left: 8px ;
+ bottom: 5px;
+}
+.txtAuto{
+  width: 100%;
+}        
+.usernameTxt{
+  width: 325px;
+  margin-top: 15px !important; 
+}
+.errortext{
+  color: red;
+}
+ .MuiInput-formControl{
+  margin-top:22px !important ;
+} 
+
+@media  screen and (max-width: 1090px) {
+ .company_name_div {
+display: none;
+ }
+.login_div{
+ width: 20%;
+margin: 10px auto;
+}
+}

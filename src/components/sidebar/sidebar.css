@@ -1,14 +1,71 @@
-/* 
-.sidebar {
-  flex: 5;
-  height:100vh;
+.sidebar{
+  margin-top: 0% !important;
+  margin-left: 0% !important;
+  background-color:whitesmoke!important;
+  height: 722px;
+  width: 20%;
+  box-shadow: 23px 0px 20px -20px rgba(0, 0, 0, 0.75);
+ position: absolute;
 
-  position: sticky;
+}
+.gg{
+ 
   
-  background: rgb(15,111,111);
-  background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100%);
+
   
-} */
+
+
+}
+.gg1{
+  margin-top: 5%;
+}
+
+.appbar{
+  margin-top: 0% !important;
+  background-color:whitesmoke;
+  width: 111%;
+  margin-left: 27% !important;
+  height: 15vh;
+  box-shadow: 0px 10px 20px -15px rgba(0, 0, 0, 0.75);
+  
+
+}
+
+
+.Heading1{
+margin-top: 10%;
+  color:#727171;
+  font-family: Secular One;
+  font-size: 30px;
+  margin-left: 20%;
+  
+ 
+ 
+}
+
+.Heading2{
+  margin-top: -5%;
+    color:#727171;
+    font-family: Secular One;
+    font-size: 30px;
+    margin-left: 110%;
+   
+   
+  }
+
+
+.Appbar{
+
+  background-color: red;
+  margin-left: 32%;
+  margin-top: 10%;
+  width:144%;
+  height:20%;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
+ 
+
+
+}
 
 
 .sidebarWrapper {
@@ -35,19 +92,14 @@
 
 }
 
-/* .sidebarList {
-  list-style: none;
-  padding-left: 5px;
- 
-} */
 
 .sidebarListItem {
-  padding: 3%;
+  padding: 4%;
   cursor: pointer;
   display: flex;
   align-items: center;
   border-radius: 10px;
-  margin-top: 3%;
+  
   
 }
 
@@ -58,12 +110,12 @@
 .sidebaritem1{
   margin-left: 5%;
   font-size: 20px;
-  /* font-weight: 10% !important; */
+  
   
   
 }
 .sidebaritemm{
-  margin-left: 5%;
+  margin-left: 7%;
   font-size: 20px;
 }
 .sidebaritem2{
@@ -71,25 +123,40 @@
   font-size: 20px;
 }
 .sidebaritem3{
-  /* margin-right: 100px; */
-  margin-left: 7%;
+  
+  margin-left: 8%;
   font-size: 20px;
 }
 .sidebaritem4{
-  margin-left: 5%;
+  margin-left: 6%;
   font-size: 20px;
 }
 
 .sidebarIcon{
     margin-right: 5px;
-    font-size: 40px !important;
-    padding:1px 5px;
+    font-size: 35px !important;
+    padding:1px 3px;
     background-color: white;
     border-radius: 10px;
     margin-left: 50px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
+
+
     
 }
+
+.sidebarIconcart{
+height:40px;
+width: 36px;
+  margin-right: 5px;
+  padding:1px 3px;
+  background-color: rgb(253, 251, 251);
+  border-radius: 10px;
+  margin-left: 50px;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
+}
+
+
 .customersimg{
   height:40px;
   width:40px;
@@ -130,8 +197,8 @@
   margin-left: 50px;
 
 
-    /* font-size: 10px !important; */
-    padding:1px 6px ;
+   
+    padding:1px 1px ;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.75);
@@ -142,6 +209,7 @@
 }
 
 .AccountPage{
+  margin-left: 16%;
   
 font-size: 180% !important;
 margin-top: 6% !important;
@@ -153,7 +221,7 @@ font-family: Secular One;
  
 }
 .AccountPage1{
-  margin-left: 20% !important;
+  margin-left: 3% !important;
   color: #727171;
 
  
@@ -163,7 +231,7 @@ font-family: Secular One;
   color:black;
 margin-top: 2%;
   
-  margin-left: 5%;
+  margin-left: 6%;
   font-size: 20px;
 
 
@@ -243,12 +311,6 @@ background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100
   margin-left: 70px;
 }
 
-.accountcircle{
- 
-  
-  
-}
-
 
 .dotdiv{
   margin-top: 100px;
@@ -320,15 +382,14 @@ background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100
 
 }
 
-.search{
-  /* margin-left: 400px !important; */
-  margin-top: 3%;
-  background-color: #727171; 
-}
 
+.appbaritems{
+  margin-top: 0% !important;
+
+}
 .dashboard{
-  /* margin-right: 0px !important; */
-  margin-top: 6% !important;
+
+  
   color: #727171;
   font-family: Secular One;
   font-size:28px ;
@@ -352,24 +413,25 @@ background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100
 
 }
 .Adminicon{
-
-  margin-left: 350%;
-  height:45%;
-  width:45%;
+  margin-top:-3%;
+  margin-left: 450%;
+  height:16%;
+  width:16%;
   border-radius: 50%;
   box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75);
 
 }
 .admin{
-  margin-top:-40%;
-  margin-left: 402%;
+  margin-top:-13%;
+  margin-left: 470%;
   font-size: 22px;
   font-family: Secular One;
   color: #727171;
  
 }
 .accountcircle{
-  margin-top:38px;
+  
+  margin-top:-15%;
   
 }
 
@@ -391,21 +453,13 @@ background: linear-gradient(90deg, rgba(15,111,111,1) 35%, rgba(3,168,119,1) 100
 }
 
 
-.Heading{
-  margin-left: 21%;
-  color:#727171;
-  font-family: Secular One;
- 
-}
-.divider{
-  margin-top: 300px !important;
-}
-/* .drawer{
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(202, 35, 35, 0.75);
-  box-shadow: 100px 10px 20px -10px rgba(155, 19, 19, 0.75);
- 
 
-} */
+.divider{
+margin-top: -5% !important;
+  width:100%!important;
+  color:rgb(240, 255, 247);
+}
+
 
 .sidebarComponents{
   text-decoration: none;
@@ -429,3 +483,65 @@ margin-top: 100px;
   margin-left: 300px;
   margin-top: 100px;
 }
+.smokewhite{
+  background-color: whitesmoke;
+ height:0px;
+ 
+}
+
+.search{
+
+  margin-left: 250%;
+  background-color: red;
+  margin-top: -19%;
+}
+
+.Searchdiv{
+
+  display: flex;
+  background-color: red;
+  
+
+}
+
+.Search{
+
+height:30px;
+background-color: #727171;
+border-radius: 10px;
+
+
+
+}
+
+
+.SearchImg{
+  height:36px;
+  width:34px;
+ 
+  border-radius: 10px;
+ 
+
+}
+
+
+
+::placeholder { 
+  color: white;
+  opacity: 1;
+}
+/* 
+.Sidebar{
+  background-color: rgb(224, 64, 104);
+  height:100vh;
+  width:250px;
+  
+}
+
+.Conatiner{
+  background-color: rgb(64, 224, 171);
+  height:100vh;
+  width:100px;
+  margin-left:250px;
+  margin-top:-723%;
+} */

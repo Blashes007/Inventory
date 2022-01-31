@@ -5,7 +5,14 @@ import { useState,useEffect } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { Alert } from "@material-ui/lab";
 import {  useNavigate } from "react-router-dom";
-import LinearWithValueLabel from '../../../components/Loginpage/progress'
+import { Divider } from '@mui/material';
+
+
+
+
+
+const popup = { position: "absolute", right: "20px", top: "100px" };
+const popup1 = { display: "none", color: "green" };
 
 export default function Addcustomer() {
 
@@ -78,15 +85,12 @@ function addCustClose(){
 navigate('/closeCustDetails')
 }
 
-function addCustClose1(){
-    <div>
-    
-    <Alert variant="filled" severity="success">
-    <LinearWithValueLabel />
-    added Sucessfully! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </Alert>
-  </div>
-  navigate('/closeCustDetails')
+function ReturnCustomerTable(){
+    document.getElementById("successlogin").style.display = "block";
+    console.log("successlogin");
+    const timer = setTimeout(() => {
+    navigate("/returnCustomertable")
+    }, 1000);
     }
     
    
@@ -107,43 +111,101 @@ function addCustClose1(){
     return (
         
         <div className="mainDiv" >
+            <div className='Firstform'>
+                
 
             <Typography gutterBottom varient="h3" align="center">
                
             </Typography>
-            <Card   style={{maxWidth:700,padding:"20px 50px" }}>
+            <Card   style={{maxWidth:500,padding:"20px 30px 0px 200px" }}>
                 <CardContent>
 
-                
-                <CloseIcon  className="close_icon" onClick={addCustClose}/>
-                
+                <div className="close_icon">
+                <CloseIcon  onClick={addCustClose}/>
+                </div>                
                     
-                    
-                    <Typography gutterBottom variant="h5">New Customer Detail</Typography>
+                    <div className='newCustomer'>
+                    <Typography gutterBottom variant="h5">New Customer Details</Typography>
+                    </div>
+                    <Divider className='divider'/>
                     <span id="error" style={error}>Please Fill All the Compulsory Field</span><br/><br/>
                     <Grid container spacing={1}>
-                        <Grid xs={12} sm={6} item>
+                        <Grid xs={12} sm={8} item>
                             <TextField onChange={(e)=>setCustomerid(e.target.value)} type="text" label="Customer Name" placeholder="Enter your Name" variant="outlined" fullWidth required />
                         </Grid>
-                        <Grid xs={12} item>
+                        <Grid xs={12} sm={8} item>
                             <TextField onChange={(e)=>setUserid(e.target.value)} type="Userid" label="Userid" placeholder="Enter your Userid" variant="outlined" fullWidth required />
                         </Grid>
-                        <Grid xs={12} item>
+                        <Grid xs={12} sm={8}  item>
                             <TextField onChange={(e)=>setVatno(e.target.value)} type="text" label="Vatno No." placeholder="Enter your Phone No." variant="outlined" fullWidth required />
                         </Grid>
-                        <Grid xs={12} item>
+                        <Grid xs={12} sm={8}  item>
                             <TextField onChange={(e)=>setCompanyName(e.target.value)} type="text" label="Company Name" placeholder="Enter your Company Name" variant="outlined" fullWidth  />
                         </Grid>
-                        <Grid xs={12} item>
+                        <Grid xs={12} sm={8}  item>
                             <TextField onChange={(e)=>setPhoneNo(e.target.value)} type="text" label="Phone Number" placeholder="Enter your Phone Number" variant="outlined" fullWidth  />
                         </Grid>
-                        <Button onClick={() => { Submit(); Add(AddCustomer); addCustClose1();}} variant="contained" color="primary" fullWidth>
+                        <div className="submitButton">
+                        <Button   onClick={() => { Submit(); Add(AddCustomer); ReturnCustomerTable();}} variant="contained" color="primary" >
                             Submit 
                         </Button>
+                        </div>
 
                     </Grid>
                 </CardContent>
             </Card>
+            
+            </div>
+{/* 
+            <div className='secondForm'>
+            <Typography gutterBottom varient="h3" align="center">
+               
+               </Typography>
+               <Card   style={{maxWidth:500,padding:"20px 30px 0px 80px" }}>
+                   <CardContent>
+   
+                   <div className="close_icon">
+                   <CloseIcon  onClick={addCustClose}/>
+                   </div>                
+                       
+                       
+                       <Typography gutterBottom variant="h5">Add Vechile Details</Typography>
+                       <span id="error" style={error}>Please Fill All the Compulsory Field</span><br/><br/>
+                       <Grid container spacing={1}>
+                           <Grid xs={12} sm={10} item>
+                               <TextField onChange={(e)=>setCustomerid(e.target.value)} type="text" label="Customer Name" placeholder="Enter your Name" variant="outlined" fullWidth required />
+                           </Grid>
+                           <Grid xs={12} sm={10} item>
+                               <TextField onChange={(e)=>setUserid(e.target.value)} type="Userid" label="Userid" placeholder="Enter your Userid" variant="outlined" fullWidth required />
+                           </Grid>
+                           <Grid xs={12} sm={10}  item>
+                               <TextField onChange={(e)=>setVatno(e.target.value)} type="text" label="Vatno No." placeholder="Enter your Phone No." variant="outlined" fullWidth required />
+                           </Grid>
+                           <Grid xs={12} sm={10}  item>
+                               <TextField onChange={(e)=>setCompanyName(e.target.value)} type="text" label="Company Name" placeholder="Enter your Company Name" variant="outlined" fullWidth  />
+                           </Grid>
+                           <Grid xs={12} sm={10}  item>
+                               <TextField onChange={(e)=>setPhoneNo(e.target.value)} type="text" label="Phone Number" placeholder="Enter your Phone Number" variant="outlined" fullWidth  />
+                           </Grid>
+                           <div className="submitButton">
+                           <Button   onClick={() => { Submit(); Add(AddCustomer); ReturnCustomerTable();}} variant="contained" color="primary" >
+                               Submit 
+                           </Button>
+                           </div>
+   
+                       </Grid>
+                   </CardContent>
+               </Card>
+            </div>
+            <div style={popup}>
+          <div id="successlogin" style={popup1}>
+            <Alert variant="filled" severity="success">
+              Data Updated Sucessfully.
+            </Alert>
+          </div>
+         
+        </div> */}
+
         </div>
 
     )

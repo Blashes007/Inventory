@@ -15,6 +15,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import "./saleslist.css";
+
 const useStyles = makeStyles((theme) => ({
     modal: {
       display: "flex",
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
-  const btnstyle = { marginTop: "50px", marginLeft: "1100px" };
+  const btnstyle = { marginTop: "5%", marginLeft: "86%", backgroundColor:'#727171' };
   const style = {
     position: "absolute",
     top: "50%",
@@ -47,7 +49,8 @@ const useStyles = makeStyles((theme) => ({
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
+      backgroundColor: '#727171',
+      // backgroundColor: theme.palette.common.black,
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -202,7 +205,7 @@ function Saleslist() {
 
     return (
      
-        <div className='purchasetable'>
+        <div className='salesTable'>
         <Button
           onClick={() => {
             handleClick();
@@ -219,7 +222,7 @@ function Saleslist() {
         
         <div className='userListUser'>
              <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table  sx={{ minWidth: 780}} aria-label="simple table">
                   <TableHead>
                   
                       
