@@ -32,7 +32,7 @@
 } */
 
 .sidebarListItem {
-  padding: 3%;
+  padding:2% !important;
   cursor: pointer;
   display: flex;
   align-items: center;

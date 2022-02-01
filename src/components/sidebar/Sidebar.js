@@ -216,6 +216,13 @@ export default function Sidebar() {
               </li>
               </Link>
 
+              <Link to="/Customers" className="sidebarComponents">
+              <li className="sidebarListItem" >
+              <img src="quotation.png" className="customersimg"/> 
+                <span className="sidebaritemm" >Quotation</span>
+              </li>
+              </Link>
+
               <Link to="/Purchase" className="sidebarComponents">
               
                <li className="sidebarListItem">
