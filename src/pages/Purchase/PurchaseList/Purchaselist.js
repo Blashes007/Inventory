@@ -31,8 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
-  
-  const btnstyle = { marginTop: "20%", marginLeft: "90%", backgroundColor:'#727171' };
+  const btnstyle = {  marginTop: "5%", marginLeft: "94%", backgroundColor:'#727171'};
   const style = {
     position: "absolute",
     top: "50%",
@@ -51,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: '#727171',
-      // backgroundColor: theme.palette.common.black,
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -221,9 +219,9 @@ function Purchaselist() {
           Add{" "}
         </Button>
         
-        <div className='userListUser'>
+        <div className='userListUserpurchase'>
              <TableContainer component={Paper}>
-                <Table  aria-label="simple table">
+                <Table sx={{ minWidth: 1150 }} aria-label="simple table">
                   <TableHead>
                   
                       

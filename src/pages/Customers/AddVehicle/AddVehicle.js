@@ -1,12 +1,13 @@
 import React from 'react';
-import './addcustomer.css';
+import './addvehicle.css';
 import { Card, CardContent, Typography, Grid, TextField, Button } from '@material-ui/core';
 import { useState,useEffect } from 'react';
-import CloseIcon from '@mui/icons-material/Close';
-import { Alert } from "@material-ui/lab";
 import {  useNavigate } from "react-router-dom";
-import { Divider } from '@mui/material';
-
+import { Divider} from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
 
 const style = {
     width: '166%',
@@ -20,7 +21,7 @@ const style = {
  const stylebtnCancel ={
     backgroundColor:'white',
     marginTop: 5,
-    marginLeft: 520,
+    marginLeft: 500,
     boxShadow:'0px 0px 0px 1px rgba(0, 0, 0, 0.75)',
     
      
@@ -29,7 +30,7 @@ const style = {
     backgroundColor:'white',
     width:90,
     marginTop: 5,
-    marginLeft: 30,
+    marginLeft: 34,
     boxShadow:'0px 0px 0px 1px rgba(0, 0, 0, 0.75)',
      
 }
@@ -42,10 +43,13 @@ const styleBtnAddVehicle={
 
 
 
+
+
+
 const popup = { position: "absolute", right: "20px", top: "100px" };
 const popup1 = { display: "none", color: "green" };
 
-export default function Addcustomer() {
+export default function AddVehicle() {
 
 
 
@@ -112,12 +116,9 @@ export default function Addcustomer() {
 
     }
 
-    // function AddVehicle(){
-    //     navigate('./AddVehicleDetails')
-    // }
-    function AddVehicle() {
-        navigate("/AddvehicleDetails");
-      }
+    function AddVehicle(){
+        navigate('./AddVehicleDetails')
+    }
 
 
 
@@ -133,13 +134,10 @@ function ReturnCustomerTable(){
 
     function Submit()
         {
-            if(Customerid =="" && Vatno=="" && Userid =="" && CompanyName =="" && PhoneNo =="")
+            if(Customerid!=="" && Vatno!=="" && Userid!=="")
             {
                 console.log(Customerid);
                 console.log(CompanyName);
-                console.log(Vatno);
-                console.log(Userid);
-                console.log(PhoneNo);
             }
             else
             {
@@ -159,13 +157,10 @@ function ReturnCustomerTable(){
             
                 <CardContent>
 
-                <div className="AddVechileButton">
-                <Button  style={styleBtnAddVehicle} onClick={() => { AddVehicle(); }} variant="contained" > Add Vehicle</Button>
-                </div>
-               
+                     
                     
-                    <div className='newCustomer'>
-                    <Typography gutterBottom variant="h5">New Customer Details</Typography>
+                    <div className='newVehicle'>
+                    <Typography gutterBottom variant="h5">New Vehicle Detail</Typography>
                     </div>
 
                    
@@ -177,53 +172,65 @@ function ReturnCustomerTable(){
                     <Grid container spacing={1}>
                     
                         <div className='FirstNameDiv' >
-                        <label>First Name :</label>
+                        <label>Name :</label>
                         <Grid  >
-                            <TextField  onChange={(e)=>setCustomerid(e.target.value)}type="text"   variant="outlined" fullWidth required />
+                            <TextField onChange={(e)=>setCustomerid(e.target.value)} type="text"   variant="outlined" fullWidth required />
                         </Grid>
                         </div>
                         <div className='MiddleNameDiv'>
-                        <label>Middle Name :</label>
+                        <label>Number :</label>
                         <Grid >
-                            <TextField  onChange={(e)=>setUserid(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                            <TextField onChange={(e)=>setCustomerid(e.target.value)} type="text"   variant="outlined" fullWidth required />
                         </Grid>
                         </div>
                         <div className='LastNameDiv' >
-                        <label>Last Name :</label>
+                        <label>Model :</label>
                         <Grid>
-                            <TextField  type="text"   variant="outlined" fullWidth required />
+                        <FormControl sx={{ marginTop:0, width: 200 , marginLeft:0, }}>
+                        <Select >
+                            <MenuItem>
+                            </MenuItem>
+                        </Select>
+                        </FormControl>
                         </Grid>
+                       
                         </div>
                         <div className='CompanyNameDiv' >
                         <label>Company Name :</label>
-                        <Grid >
-                            <TextField onChange={(e)=>setCompanyName(e.target.value)} type="text"   variant="outlined" fullWidth required />
-                        </Grid>
+                        <FormControl sx={{ marginTop:0, width: 670 , marginLeft:0, }}>
+                        <Select >
+                            <MenuItem>
+                            </MenuItem>
+                        </Select>
+                        </FormControl>
                         </div>
-                        <div className='VatNoDiv' >
-                        <label>VAT No :</label>
+                        <div className='DateDiv' >
+                        <label>Date :</label>
                         <Grid>
-                            <TextField onChange={(e)=>setVatno(e.target.value)} type="text"  variant="outlined" fullWidth required />
+                            <TextField onChange={(e)=>setCustomerid(e.target.value)} type="text"  variant="outlined" fullWidth required />
                         </Grid>
                         </div>
                         <div  className="AddressDiv">
-                        <label>Address :</label>
+                        <label>Time :</label>
                         <Grid >
-                            <TextField type="text"  variant="outlined" fullWidth required />
+                            <TextField onChange={(e)=>setCustomerid(e.target.value)} type="text"  variant="outlined" fullWidth required />
                         </Grid>
                         </div>
-                        <div className='PhoneNumberDiv'>
-                        <label>Phone Number :</label>
-                        <Grid >
-                            <TextField onChange={(e)=>setPhoneNo(e.target.value)} type="text"   variant="outlined" fullWidth required />
-                        </Grid>
+
+                        <div  className="RepairDiv">
+                        <label>Repair Part :</label>
+                        <TextareaAutosize 
+                               
+                                maxRows={4}
+                                aria-label="maximum height"
+                                placeholder="Maximum 4 rows"
+                                defaultValue=""
+                                style={{ width: 680,   marginTop: 5,
+                                    marginLeft: 1,height:100, borderRadius:5}}
+                        />
+                       
                         </div>
-                        <div  className='MobileNumberDiv'>
-                        <label>Mobile Number :</label>
-                        <Grid >
-                            <TextField  type="text"  variant="outlined" fullWidth required />
-                        </Grid>
-                        </div>
+                        
                    
                     {/* <Grid xs={12} sm={8} item>
                             <TextField onChange={(e)=>setCustomerid(e.target.value)} type="text" label="First Name" placeholder="Enter your  Name" variant="outlined" fullWidth required />

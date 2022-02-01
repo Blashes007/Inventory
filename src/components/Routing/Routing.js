@@ -17,6 +17,7 @@ import Addpurchasedetails from '../../pages/Purchase/AddPurchase/Addpurchase';
 import Editpurchase from '../../pages/Purchase/EditPurchase/Editpurchase';
 import Saleslist from '../../pages/Sales/Saleslist/Saleslist';
 import AddSalesDetails from '../../pages/Sales/Addsales/Addsales';
+import AddVehicle from '../../pages/Customers/AddVehicle/AddVehicle';
 
 export default function Routing() {
     return <>{Auth()?<Test/>:<Loginpage/>}</>
@@ -39,10 +40,6 @@ function LoadUrl()
       <Container/>
     )
   }
-
-
-  //Customers
-
   if(slug==="/Customers"){
     return(
       <Customers/>
@@ -54,25 +51,20 @@ function LoadUrl()
       <Addcustomer/>
     )}
 
+ 
+      if(slug=="/AddvehicleDetails"){
+        return(
+          <AddVehicle/>
+        )}
+  
+
   
     if(slug=="/updatecustomer"){
       return(
         <UpdateCustomer/>
       )
     }
-    if(slug=="/returnCustomertable"){
-      return(
-        <Customers/>
-      )
-    }
-    if(slug=="/closeCustDetails"){
-      return(
-        <Customers/>
-      )
-    }
-    
-    
-    
+
 
     //Purchase
 
@@ -102,8 +94,6 @@ function LoadUrl()
   }
 
 
-
-
   //Sales
 
   if(slug=="/Sales"){
@@ -124,7 +114,26 @@ function LoadUrl()
 
 
  
-
+//   if(slug==="/Saleslist"){
+//     return(
+//       <SalesList/>
+//     )
+//   }
+  // if(slug=="/Repair"){
+  //   return(
+  //     <Repair/>
+  //   )
+  // }
+//   if(slug==="/Report"){
+//     return(
+//       <Report/>
+//     )
+//   }
+  // if(slug=="/Settings"){
+  //   return(
+  //     <Settings/>
+  //   )
+  // }
   
 }
 function Test()

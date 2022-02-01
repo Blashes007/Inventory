@@ -1,9 +1,6 @@
 .purchasetable{
-     margin-left: -47%;
-  /* margin-top: 10%;  */
-
- /* margin-left:7px;
-    margin-right: 50px; */
+    margin-left: 22%;
+    margin-top: 10%;
 }
 
 .editbtn{
@@ -15,15 +12,7 @@
     cursor: pointer;
     margin-right: 20px;
 }
-
-
-
-
-.userListUser {
-    
-    margin-top: 1%; 
-    margin-left:7px;
-    margin-right: 50px;
-
-    
-  }
+.userListUserpurchase{
+   
+    margin-top: 2% !important;
+}

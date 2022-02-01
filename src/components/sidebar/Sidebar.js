@@ -1,6 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
+import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
 import './sidebar.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -15,10 +18,8 @@ import GroupIcon from '@material-ui/icons/Group';
 import InsertDriveFileSharpIcon from '@material-ui/icons/InsertDriveFileSharp';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import { Button} from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { ButtonGroup } from "@material-ui/core";
-// import Container from '../container/container';
-import Container from '../container/container';
 
 
 const error ={ display:'none'};
@@ -86,11 +87,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-const drawerWidth = 270;
+const drawerWidth = 298;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+   
+    
+    
   },
   appBar: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -99,16 +103,16 @@ const useStyles = makeStyles((theme) => ({
     
   },
   drawer: {
-    width: drawerWidth,
-    flexShrink: 100,
+    width: 100,
+    flexShrink: 0,
   
 
     
   },
   drawerPaper: {
-    width: drawerWidth,
-    backgroundColor:'whitesmoke',
-    flex: 1,
+    width: 270,
+   
+    
 boxShadow: ' 6px 0px 20px -6px rgba(0, 0, 0, 0.75)',
     
 
@@ -159,52 +163,40 @@ export default function Sidebar() {
 
 
   return (
-          // <div>
-          //   <div className='Sidebar'>
+    <div className={classes.root}>
+      <CssBaseline />
+      <AppBar position="fixed" className={classes.appBar} color="default">
+        <Toolbar>
+          <h2 className= "dashboard">Dashboard</h2>
+          
+          <Search className='search'>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase className="searchcolor"
+              placeholder="Search...."
+              
+              inputProps={{ 'aria-label': 'search' }}
+              
+            />
+          </Search>
+          <div className='accountcircle'>
+          
+          <img  src="admin.png" className='Adminicon' /><h3 className='admin'>Admin</h3>
+          </div>
 
-          //   </div>
-
-          //   <div className="Conatiner">
-
-          //     <div className='appBar'>
-
-          //     </div>
-
-          //     <div className="subContainer">
-
-          //     </div>
-
-          //   </div>
-
-          // </div>
+          
+        </Toolbar>
+      </AppBar>
 
 
-    
-    
-      <div  className='gg'>
-         
-<div className='sidebar'>
+      <div className='sidebar'>
 
 
 <h1  className='Heading1'> C.M AUTO  </h1> 
-<h1  className='Heading2'> Dashboard  </h1> 
-
-<div  className="search" >
 
 
-  <div className="Searchdiv">
-  <img src="search.png" className="SearchImg"/> 
-  <input  className="Search" type="text" placeholder='Search.....'  />
 
-  </div>    
-           
-   </div>
-
-
-   <div className='accountcircle'>
-          
-          <img  src="admin.png" className='Adminicon' /><h3 className='admin'>Admin</h3>
-   </div>
 
 <Divider  className='divider'/>
 
@@ -254,7 +246,7 @@ export default function Sidebar() {
               <img src="logouticon.png" className="logoutimg" />
               <span className="btnTxt">Sign out</span>
             
-            </li>
+              </li>
             
         <div className='version1'>
         <h3 className='version'>Version 1.0</h3>
@@ -266,155 +258,117 @@ export default function Sidebar() {
              
 
 </div>
-
-
-
-
-<div className='appbar'>
-
-
-
-
-</div>
-
-</div> 
-
-
+      {/* <Drawer
+        // className={classes.drawer}
+        variant="permanent"
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+        anchor="left"
+        className="sidebar"
         
-
-
-       /* <div className='Appbar'>
-
-      
-       
-          <div className='accountcircle'>
-          
-          <img  src="admin.png" className='Adminicon' /><h3 className='admin'>Admin</h3>
-          </div>
-
-          
-       
-        </div>  */
-
-       
-     
-    
-    
-//   );
-// }
-    
-    
-      // <div>
-      // <div className="sidebar"  >
-      // {/* <Drawer
-      //   // className={classes.drawer}
-      //   variant="permanent"
-      //   // classes={{
-      //   //   paper: classes.drawerPaper,
-      //   // }}
-      //   // anchor="left"
+      >
+        <div className={classes.toolbar}>
+       <h1 className='Heading'> C.M AUTO  </h1> 
+        </div>
         
-        
-      // > */}
-      //   {/* className={classes.toolbar} */}
-      //   <div className='Heading'>
-      //  <h1  className='Heading1'> C.M AUTO  </h1> 
-       
-      //   </div>
-      //   <Divider  className='divider'/>
             
-      //     {/* <div classsName="divider" >
-      //   <Divider />
-      //   </div> */}
+          <div classsName="divider" >
+        <Divider />
+        </div>
 
-      //         <Link to="/Dashboard" className="sidebarComponents">
-      //         <li className="sidebarListItem" >
-      //           <HomeSharpIcon className="sidebarIcon" />
-      //           <span className="sidebaritem1" >Dashboard</span> 
-      //         </li>
-      //         </Link>
+              <Link to="/Dashboard" className="sidebarComponents">
+              <li className="sidebarListItem" >
+                <HomeSharpIcon className="sidebarIcon" />
+                <span className="sidebaritem1" >Dashboard</span> 
+              </li>
+              </Link>
 
-      //         <Link to="/Customers" className="sidebarComponents">
-      //         <li className="sidebarListItem" >
-      //         <img src="Customers.png" className="customersimg"/> 
-      //           <span className="sidebaritemm" >Customer</span>
-      //         </li>
-      //         </Link>
+              <Link to="/Customers" className="sidebarComponents">
+              <li className="sidebarListItem" >
+              <img src="Customers.png" className="customersimg"/> 
+                <span className="sidebaritemm" >Customer</span>
+              </li>
+              </Link>
 
-      //         <Link to="/Purchase" className="sidebarComponents">
-      //         <li className="sidebarListItem">
-      //           <ShoppingCartIcon className="sidebarIcon" />
-      //             <span className="sidebaritem2">Purchase</span>
-      //         </li>
-      //         </Link>
-      //         <ButtonGroup id="error" style={error} fullWidth className="purchasecomponents"
-      //         orientation="vertical"  onMouseEnter={Purchases} onMouseLeave={Purchases}
-      //           >
-      //         {buttons}
-      //       </ButtonGroup >
+              <Link to="/Purchase" className="sidebarComponents">
+              <li className="sidebarListItem">
+                <ShoppingCartIcon className="sidebarIcon" />
+                  <span className="sidebaritem2">Purchase</span>
+              </li>
+              </Link>
+              <ButtonGroup id="error" style={error} fullWidth className="purchasecomponents"
+              orientation="vertical"  onMouseEnter={Purchases} onMouseLeave={Purchases}
+                >
+              {buttons}
+            </ButtonGroup >
    
 
-      //         <Link to="/Sales" className="sidebarComponents">
-      //         <li className="sidebarListItem">
-      //         <img src="rupees.png" className="rupeesimg"/>
-      //             <span className="sidebaritem3">Sales</span> 
-      //         </li>
-      //         </Link>
-      //         <li className="sidebarListItem">
-      //           <InsertDriveFileSharpIcon className="sidebarIcon" />
-      //           <span className="sidebaritem4">Report</span> 
-      //         </li>
+              <Link to="/Sales" className="sidebarComponents">
+              <li className="sidebarListItem">
+              <img src="rupees.png" className="rupeesimg"/>
+                  <span className="sidebaritem3">Sales</span> 
+              </li>
+              </Link>
+              <li className="sidebarListItem">
+                <InsertDriveFileSharpIcon className="sidebarIcon" />
+                <span className="sidebaritem4">Report</span> 
+              </li>
 
-      //         <div className='AccountPage1'>
-      //         <h1 className='AccountPage' >Account Page</h1>
-      //         </div>
+              <div className='AccountPage1'>
+              <h1 className='AccountPage' >Account Page</h1>
+              </div>
           
 
-      //         <li className="sidebarListItemLogout"  onClick={Logout}>        
+              <li className="sidebarListItemLogout"  onClick={Logout}>        
              
-      //         <img src="logouticon.png" className="logoutimg" />
-      //         <span className="btnTxt">Sign out</span>
+              <img src="logouticon.png" className="logoutimg" />
+              <span className="btnTxt">Sign out</span>
             
-      //       </li>
+            </li>
             
-      //   <div className='version1'>
-      //   <h3 className='version'>Version 1.0</h3>
-      //   </div>
+        <div className='version1'>
+        <h3 className='version'>Version 1.0</h3>
+        </div>
         
-      // {/* </Drawer> */}
-      // </div>
-
-
-      // <div className='Appbar'>
-
+      </Drawer> */}
       
-      //   <Toolbar>
-      //     <h2 className= "dashboard">Dashboard</h2>
-          
-      //     <Search className='search'>
-      //       <SearchIconWrapper>
-      //         <SearchIcon />
-      //       </SearchIconWrapper>
-      //       <StyledInputBase className="searchcolor"
-      //         placeholder="Search...."
-              
-      //         inputProps={{ 'aria-label': 'search' }}
-              
-      //       />
-      //     </Search>
+      
+            {/* <main className={classes.content}> */}
+        {/* <div className={classes.toolbar} /> */}
+       {/* <div>
 
-      //     <div className='accountcircle'>
-          
-      //     <img  src="admin.png" className='Adminicon' /><h3 className='admin'>Admin</h3>
-      //     </div>
+        <div className='dotdiv'>
+      <span className='greendot'></span>
+      <span className='todayscollection'>Today's Collection</span> 
+      </div>
+        
+        <div className='reddiv'>
+        <span className='reddot'></span> <span className='purchase'>Purchase</span>
+        </div>
 
-          
-      //   </Toolbar>
-      //   </div>
+         <div className='bluediv'>
+         <span className='bluedot'></span><span className='sales'>Sales</span> 
+           </div> 
+         
+         <div className='lastdiv'>
+         <span className='lastdot'></span>   <span className='newcustomer'>NewCutomer</span>
+         </div>
 
-      //   </div>
-     
-    
+        
+           
+       
+         <FeaturedInfo/>
+        <Grid container color ="blue" spacing={2}>
+  <Grid item xs={12}>
+  <Item></Item>
+  </Grid>
+  
+  
+</Grid>
+</div> */}
+      {/* </main> */}
+    </div>
     
   );
 }

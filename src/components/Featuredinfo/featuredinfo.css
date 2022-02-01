@@ -1,140 +1,29 @@
 .featured {
-  margin-top: 8%;
-  width: 90px;
+  margin-top: 3%;
+  width: 81%;
   display: flex;
   justify-content: space-between;
   height:17vh;
-  margin-left: -180%;
 
+}
+
+.featuredItem {
+  flex: 1;
+  /* margin: 0px 0px 0px 0px 50px; */
+  margin: 0px -270px 40px 40px ;
+  padding: -150px  ;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  margin-left: 340px;
   
-
-}
-
-.featuredItem1 {
-  flex: 1;
-  /* margin: 0px 0px 0px 0px 50px; */
-  margin: 0px 10px 40px 40px ;
-  padding: -150px  ;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75);
-  background-color: white;
- /* margin-left: -350%; */
- /* margin-right: 0%; */
-
- /* margin-top: 50%; */
-
-
-}
-.featuredItem2 {
-  flex: 1;
-  /* margin: 0px 0px 0px 0px 50px; */
-  margin: 0px 10px 40px 40px ;
-  padding: -150px  ;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75);
-  background-color: white;
- /* margin-left: -350%; */
- /* margin-right: 0%; */
-
- /* margin-top: 35%; */
- /* margin-left: 100% !important; */
-
-}
-
-.featuredItem3 {
-  flex: 1;
-  /* margin: 0px 0px 0px 0px 50px; */
-  margin: 0px 10px 40px 40px ;
-  padding: -150px  ;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75);
-  background-color: white;
- /* margin-left: -350%; */
- /* margin-right: 0%; */
- /* margin-left: 50%; */
- 
- /* margin-top: -325%; */
- /* margin-left: 50% !important; */
-
- 
-}
-.featuredItem4 {
-  flex: 1;
-  /* margin: 0px 0px 0px 0px 50px; */
-  margin: 0px 10px 40px 40px ;
-  padding: -150px  ;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75);
-  background-color: white;
- /* margin-left: -350%; */
- /* margin-right: 0%; */
- /* margin-left: 50%; */
- 
- /* margin-top: -325%; */
- /* margin-left: 100% !important; */
-
- 
-}
-
-.featuredusericon{
-
-
-  margin-left: 100px;
-  margin-top:-10px;
-}
-
-
-.featuredTotal{
-color:  rgb(15,111,111);
-margin-left: 3%;
-
-}
-.userIcon{
-  height:44px;
-  width: 40px;
-  margin-left: -60px;
-  
-}
-.featuredUserIcon{
-  margin-top: -60%;
-  margin-left: 50%;
-}
-
-
-
-
-.newCust{
-  flex: 1;
-  /* margin: 0px 0px 0px 0px 50px; */
-  margin: 0px -40px 40px 30px ;
-  padding: -150px  ;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75);
-  background-color: white;
- /* margin-left: -350%; */
- margin-right: 0%;
- width: 220%;
-
 }
 
 .featuredTitle{
     font-size: 20px;
-    margin-left:8%;
-}
-.featuredTitlesales{
-  font-size: 20px;
-    margin-left:8%;
-
+    margin-left: 18px;
 }
 
 .featuredMoneyContainer{
@@ -151,27 +40,26 @@ margin-left: 3%;
 .featuredCartIcon{
     display: flex;
     align-items: center;
-    margin-left: 15px;
+    margin-left: 1%;
     margin-top:-30px;
 }
 
 .featuredMoneytIcon{
   display: flex;
   align-items: center;
-  margin-left: 15px;
+  margin-left: 1% !important;
   margin-top:-30px;
 }
 .moneyimage{
   width:40px;
   height:40px;
-  margin-left: -20%;
 
 }
 
 .featuredMoneyIconblue{
   display: flex;
   align-items: center;
-  margin-left: 15px;
+  margin-left: 1% !important;
   margin-top:-30px;
 
 }
@@ -181,8 +69,6 @@ margin-left: 3%;
 .moneyimageblue{
   width:40px;
   height:40px;
-  margin-left: -15%;
-
 
 }
 
@@ -191,7 +77,6 @@ margin-left: 3%;
 .featuredCartIconred{
   width:40px;
   height:40px;
-  margin-left: -15%;
 
 }
 
@@ -224,31 +109,33 @@ margin-left: 3%;
 }
 
 .usersicon{
- /* display: flex;
-
-  margin-left: 300px;
-  margin-top:-50px;  */
-  width:40%;
-  height:40%;
-  margin-left: 50%;
-  margin-top:0%;
-  
+  display: flex;
+  align-items: center;
+  margin-left: 79%;
+  margin-top:-50px;
 
 }
-.featuredtotal{
-   color: rgb(15,111,111);
-   
+
+.userimage{
+  width:40px;
+  height:40px;
+
 }
 
-
-/* 
 .Totalcustomer{
   color: rgb(15,111,111);
   font-size: 28px;
   font-weight: 600;
-  margin-left: 150px;
+  margin-left: 15px;
+  margin-top:-10px !important;
+ 
 
-} */
+}
+.newCustomer{
+  margin-top:2% !important;
+  margin-left: 3px !important;
+
+}
 
 .featuredSub{
     font-size: 15px;

@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // const btnstyle = { marginTop: "50px", marginLeft: "1100px", backgroundColor:'#727171',  };
-const btnstyle = { marginTop: "5%", marginLeft: "86%", backgroundColor:'#727171',  };
+const btnstyle = { marginTop: "0%", marginLeft: "180%", backgroundColor:'#727171',height:40,width:80 };
 const style = {
   position: "absolute",
   top: "50%",
@@ -353,7 +353,8 @@ function Customers() {
   function editUser() {
     navigate("/edituser");
   }
-
+ 
+  
  
 
   const handleChangePage = (event, newPage) => {
@@ -379,13 +380,14 @@ function Customers() {
         {" "}
         Add{" "}
       </Button>
+    
 
-      <div className='userListUser'>
+      <div className='userListCustomer'>
            <TableContainer component={Paper}>
-              <Table sx={{ minWidth: 780}} aria-label="simple table">
+              <Table sx={{ minWidth: 1110,}} aria-label="simple table">
                 <TableHead>
                 
-                {/* minWidth: 760 */}
+                    
                     <TableRow>
                    
                       <StyledTableCell align="right">Name</StyledTableCell>

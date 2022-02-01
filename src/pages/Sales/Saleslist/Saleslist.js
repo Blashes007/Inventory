@@ -1,4 +1,5 @@
 import React from 'react'
+import './saleslist.css';
 import { useState, useEffect } from "react";
 import { Button, TablePagination } from "@mui/material";
 import Table from "@mui/material/Table";
@@ -15,8 +16,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import "./saleslist.css";
-
 const useStyles = makeStyles((theme) => ({
     modal: {
       display: "flex",
@@ -31,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
-  const btnstyle = { marginTop: "5%", marginLeft: "86%", backgroundColor:'#727171' };
+  const btnstyle = {  marginTop: "5%", marginLeft: "94%", backgroundColor:'#727171'};
   const style = {
     position: "absolute",
     top: "50%",
@@ -50,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: '#727171',
-      // backgroundColor: theme.palette.common.black,
       color: theme.palette.common.white,
     },
     [`&.${tableCellClasses.body}`]: {
@@ -205,7 +203,7 @@ function Saleslist() {
 
     return (
      
-        <div className='salesTable'>
+        <div className='salestable'>
         <Button
           onClick={() => {
             handleClick();
@@ -220,9 +218,9 @@ function Saleslist() {
           Add{" "}
         </Button>
         
-        <div className='userListUser'>
+        <div className='userListSales'>
              <TableContainer component={Paper}>
-                <Table  sx={{ minWidth: 780}} aria-label="simple table">
+                <Table sx={{ minWidth: 1110 }} aria-label="simple table">
                   <TableHead>
                   
                       

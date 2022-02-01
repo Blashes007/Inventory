@@ -1,42 +1,49 @@
 
-
 .mainDiv{
-  /* margin-left: -555%;
-  margin-top: 10%; */
- 
-  margin-top: 1%; 
-
-  margin-right: 100px;
- 
+  margin-left: -50% !important;
+  margin-top: 10%;  
   
+
+} 
+.userListCustomer{
+margin-top: 5% !important;
+margin-left: -93%;
+
 
 }
 
 
+.userListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.userListEdit{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.txtColor{
   
-  .userListImg {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
+  color: white !important;;
+}
+.userListDelete{
+    color: red;
+    cursor: pointer;
+   
+}
+
+@media  screen and (max-width: 1090px) {
+   
+  .userListCustomer{
+   width: 200%;
+  margin: 0px auto;
   }
-  
-  .userListEdit{
-      border: none;
-      border-radius: 10px;
-      padding: 5px 10px;
-      background-color: #3bb077;
-      color: white;
-      cursor: pointer;
-      margin-right: 20px;
-  }
-  .txtColor{
-    
-    color: white !important;;
-  }
-  .userListDelete{
-      color: red;
-      cursor: pointer;
-     
   }
