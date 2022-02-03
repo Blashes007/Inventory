@@ -7,12 +7,27 @@ import { Card, CardContent, Typography, Grid, TextField, Button } from '@materia
 import { useState,useEffect } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { Alert } from "@material-ui/lab";
+import './editpurchase.css';
+import { Divider } from '@mui/material';
+
+
 
 
 
 const popup = { position: "absolute", right: "20px", top: "100px" };
 const popup1 = { display: "none", color: "green" };
+ const dividerStyl ={
+     width: '100%',
+ }
 
+  const btnStyle = {
+      widht:80,
+      height:40,
+      backgroundColor:'white',
+      boxShadow:'0px 0px 0px 1px rgba(0, 0, 0, 0.75)',
+      marginTop:190,
+      marginLeft:-85,
+  }
 
 
 export default function Editpurchase() {
@@ -122,27 +137,57 @@ function returnPurchasetable(){
         }
     return (
         
-        <div className="mainDiv"  >
+        <div className="mainDivEditPurchase"  >
 
            
             <Typography gutterBottom varient="h3" align="center">
                
             </Typography>
+            <div className='cardDivEditPurchase'>
             
-            <Card style={{maxWidth:700,margin:"0 auto",padding:"20px 5px"}}>
+            <Card >
                 <CardContent>
 
                 
-                <CloseIcon  className="close_icon" />
+            
                 
   
                
                     <Typography gutterBottom variant="h5">Edit Purchase Detail</Typography>
+                    <Divider style={dividerStyl}/>
                     <span id="error" style={error}>Please Fill All the Compulsory Field</span><br/><br/>
                     
                     <Grid container spacing={1}>
+
+                    <div className='PurchaseIdDiv' >
+                        <label>Purchase Id :</label>
+                        <Grid  >
+                            <TextField value={PurchaseId}  onChange={(e)=> setPurchaseId(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                    </div>
+
+                    <div className='VendorIdDiv' >
+                        <label>Vendor ID :</label>
+                        <Grid  >
+                            <TextField  value={VendorId} onChange={(e)=>setVendorId(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                    </div>
+
+                    <div className='InvoiceNoDiv' >
+                        <label>Invoice No :</label>
+                        <Grid  >
+                            <TextField  value={InvoiceNo} onChange={(e)=>setInvoiceNo(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                    </div>
+
+                    <div className='TotalAmtDiv' >
+                        <label>Total Amount :</label>
+                        <Grid  >
+                            <TextField  value={TotalAmount} onChange={(e)=>setTotalAmount(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                    </div>
                     
-                        <Grid xs={12} sm={6} item>
+                        {/* <Grid xs={12} sm={6} item>
                             <TextField value={PurchaseId}  onChange={(e)=> setPurchaseId(e.target.value)} type="text" label="PurchaseId" placeholder="Enter Purchase ID " variant="outlined" fullWidth required />
                            
                         </Grid>
@@ -155,8 +200,8 @@ function returnPurchasetable(){
                         </Grid>
                         <Grid xs={12} item>
                             <TextField value={TotalAmount} onChange={(e)=>setTotalAmount(e.target.value)} type="payment" label="Total Amount" placeholder="Enter Total Amount" variant="outlined" fullWidth required />
-                        </Grid>
-                        <Button onClick={() => { Submit(); Update(UpdatePurchase); returnPurchasetable();}} variant="contained" color="primary" fullWidth>
+                        </Grid> */}
+                        <Button  style={btnStyle} onClick={() => { Submit(); Update(UpdatePurchase); returnPurchasetable();}} variant="contained" >
                             Submit 
                         </Button>
                         
@@ -164,6 +209,7 @@ function returnPurchasetable(){
                    
                 </CardContent>
             </Card>
+            </div>
 
             <div style={popup}>
           <div id="successlogin" style={popup1}>

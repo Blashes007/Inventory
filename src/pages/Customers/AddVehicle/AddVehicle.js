@@ -147,12 +147,12 @@ function ReturnCustomerTable(){
         }
     return (
         
-        <div className="mainDiv" >
+        <div className="mainDivvehicle" >
             <div className='Firstform'>
                 
 
            
-            <div className='cardDiv'>
+            <div className='cardDivVehicle'>
             <Card  >
             
                 <CardContent>

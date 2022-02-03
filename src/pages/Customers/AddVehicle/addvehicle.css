@@ -1,6 +1,6 @@
 .gg{
-    margin-left: 30%;
-    margin-top: 10%;
+    margin-left: -500%;
+    margin-top: -10%;
 }
 .newVehicle{
     margin-top: 0%;
@@ -13,8 +13,16 @@
 
 }
 
+.cardDivVehicle{
+    margin-left: 36% !important;
+    width:50%;
+    margin-top: 8%;
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.75);
+}
+
 .CompanyNameDiv{
     margin-top: 3%;
+    margin-left:5%;
 }
 .DateDiv{
     margin-top: 3%;

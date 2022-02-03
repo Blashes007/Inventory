@@ -7,6 +7,27 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Alert } from "@material-ui/lab";
 import {  useNavigate } from "react-router-dom";
 // import LinearWithValueLabel from "../progress";
+import { Divider } from '@mui/material';
+import './addpurchase.css'
+
+
+const style = {
+    width: '166%',
+    marginLeft: -30,
+    marginTop:2,
+    
+
+  };
+
+  const btnStyle ={
+      width:90,
+      height:40,
+      marginTop:110,
+      marginLeft:-90,
+      backgroundColor:'white',
+      boxShadow:'0px 0px 0px 1px rgba(0, 0, 0, 0.75)'
+
+  }
 
 export default function Addpurchasedetails() {
 
@@ -112,18 +133,45 @@ function addCustClose1(){
             <Typography gutterBottom varient="h3" align="center">
                
             </Typography>
-            <Card style={{maxWidth:700,margin:"0 auto",padding:"20px 5px"}}>
+            <div className='CardDiv'>
+            <Card >
                 <CardContent>
-
-                
-                <CloseIcon  className="close_icon" onClick={addCustClose}/>
-                
-                    
-                    
-                    <Typography gutterBottom variant="h5">New Purchase Details</Typography>
+                    <div className='newPurchaseDetail'>
+                    <Typography gutterBottom variant="h5"> Add New Purchase Details</Typography>
+                    </div>
+                    <Divider style={style}/>
                     <span id="error" style={error}>Please Fill All the Compulsory Field</span><br/><br/>
                     <Grid container spacing={1}>
-                        <Grid xs={12} sm={6} item>
+
+                        <div className='VendorIdDiv' >
+                        <label>Vendor Id :</label>
+                        <Grid  >
+                            <TextField  onChange={(e)=>setVendorid(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                        </div>
+
+                        <div className='UserIdDiv' >
+                        <label>User Id :</label>
+                        <Grid  >
+                            <TextField  onChange={(e)=>setUserid(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                        </div>
+
+                        <div className='InvoicenoDiv' >
+                        <label>Invoice No :</label>
+                        <Grid  >
+                            <TextField  onChange={(e)=>setInvoiceno(e.target.value)}type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                        </div>
+
+                        <div className='TotalAmountDiv' >
+                        <label>Total Amount :</label>
+                        <Grid  >
+                            <TextField  onChange={(e)=>setTotalAmount(e.target.value)}type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                        </div>
+
+                        {/* <Grid xs={12} sm={6} item>
                             <TextField onChange={(e)=>setVendorid(e.target.value)} type="text" label="vendor ID" placeholder="Vendor Id" variant="outlined" fullWidth required />
                         </Grid>
                         <Grid xs={12} item>
@@ -135,14 +183,15 @@ function addCustClose1(){
                         
                         <Grid xs={12} item>
                             <TextField onChange={(e)=>setTotalAmount(e.target.value)} type="text" label="Total Amount" placeholder="Enter Total amount" variant="outlined" fullWidth  />
-                        </Grid>
-                        <Button onClick={() => { Submit(); Add(Addpurchasedetails); }} variant="contained" color="primary" fullWidth>
+                        </Grid> */}
+                        <Button  style={btnStyle} onClick={() => { Submit(); Add(Addpurchasedetails); }} variant="contained" >
                             Submit 
                         </Button>
 
                     </Grid>
                 </CardContent>
             </Card>
+            </div>
         </div>
 
     )

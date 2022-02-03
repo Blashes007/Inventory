@@ -7,7 +7,25 @@ import { Card, CardContent, Typography, Grid, TextField, Button } from '@materia
 import { useState,useEffect } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { Alert } from "@material-ui/lab";
+import { Divider } from '@mui/material';
 
+const btnstyle={
+    backgroundColor:'white',
+    boxShadow:'0px 0px 0px 1px rgba(0, 0, 0, 0.75)',
+
+}
+
+const styledivider={
+    width: '110%',
+    marginLeft:-2,
+  
+    marginTop:2,
+
+}
+
+
+const popup = { position: "absolute", right: "20px", top: "100px" };
+const popup1 = { display: "none", color: "green" };
 
 export default function UpdateCustomer() {
     
@@ -69,19 +87,18 @@ export default function UpdateCustomer() {
 
     }
 
-function addCustClose(){
-navigate('/closeCustDetails')
-}
 
-function addCustClose1(){
-    <div>
-    
-    <Alert variant="filled" severity="success">
-    <LinearWithValueLabel />
-    added Sucessfully! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </Alert>
-  </div>
-  navigate('/closeCustDetails')
+
+function EditCustomer(){
+    <div style={popup}>
+          <div id="successlogin" style={popup1}>
+            <Alert variant="filled" severity="success">
+              Data Updated Sucessfully.
+            </Alert>
+          </div>
+         
+        </div>
+  navigate('/Customers')
     }
     
    
@@ -101,48 +118,85 @@ function addCustClose1(){
         }
     return (
         
-        <div className="mainDiv"  >
+        <div className="mainDivv"  >
 
            
             <Typography gutterBottom varient="h3" align="center">
                
             </Typography>
-            
-            <Card style={{maxWidth:700,margin:"0 auto",padding:"20px 5px"}}>
+            <div className="cardDiv">
+
+          
+            <Card >
                 <CardContent>
 
                 
-                <CloseIcon  className="close_icon" onClick={addCustClose}/>
+              
                 
-
+                     <div className='EditCustomer'>
+                    <Typography gutterBottom variant="h5">Edit Customer Details</Typography>
+                    </div>
                
-                    <Typography gutterBottom variant="h5">Update Customer Detail</Typography>
+                    <Divider sx={styledivider}/> 
                     <span id="error" style={error}>Please Fill All the Compulsory Field</span><br/><br/>
                     
                     <Grid container spacing={1}>
-                    
-                        <Grid xs={12} sm={6} item>
+
+                    <Grid >
                             <TextField value={Customerid} type="hidden" />
                            
                         </Grid>
- 
-                        <Grid xs={12} item>
-                            <TextField value={Vatno} onChange={(e)=>setVatno(e.target.value)} type="text" label="Vat No." placeholder="VatNo" variant="outlined" fullWidth required />
+
+                    <div className='VatnoDiv' >
+                        <label>Vatno :</label>
+                        <Grid  >
+                            <TextField  value={Vatno} onChange={(e)=>setVatno(e.target.value)} type="text"   variant="outlined" fullWidth required />
                         </Grid>
-                        <Grid xs={12} item>
+                    </div>
+
+                    <div className='PhoneDiv' >
+                        <label>Phone No :</label>
+                        <Grid  >
+                            <TextField  value={Phoneno} onChange={(e)=>setPhoneno(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                    </div>
+
+                    <div className='CompanyNameDivEdit' >
+                        <label>Company Name :</label>
+                        <Grid  >
+                            <TextField  value={CompanyName} onChange={(e)=>setCompanyName(e.target.value)} type="text"   variant="outlined" fullWidth required />
+                        </Grid>
+                    </div>
+
+                        
+{/*                     
+                        <Grid >
+                            <TextField value={Customerid} type="hidden" />
+                           
+                        </Grid>
+
+                        <Grid >
+                            <TextField value={Vatno} onChange={(e)=>setVatno(e.target.value)} type="text" label="Vat No." placeholder="VatNo" variant="outlined" fullWidth required />
+                        </Grid> 
+                        <Grid >
                             <TextField value={Phoneno} onChange={(e)=>setPhoneno(e.target.value)} type="text" label="Phone No." placeholder="Enter your Phone No." variant="outlined" fullWidth required />
                         </Grid>
-                        <Grid xs={12} item>
+                        <Grid >
                             <TextField value={CompanyName} onChange={(e)=>setCompanyName(e.target.value)} type="text" label="Company Name" placeholder="Enter your Company Name" variant="outlined" fullWidth  />
-                        </Grid>
-                        <Button onClick={() => { Submit(); Update(UpdateCustomer); addCustClose1();}} variant="contained" color="primary" fullWidth>
+                        </Grid> */}
+                        <div className='submitbtn'>
+                        <Button  style={btnstyle} onClick={() => { Submit(); Update(UpdateCustomer); EditCustomer();}} variant="contained"  fullWidth>
                             Submit 
                         </Button>
+                        </div>
  
                     </Grid>
                    
                 </CardContent>
             </Card>
+            </div>
+
+            
             
         </div>
 

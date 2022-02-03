@@ -1,5 +1,38 @@
 
-.mainDiv{
-    margin-left: -35%;
-    margin-top: 10%;
+.mainDivv{
+   
+
+}
+.cardDiv{
+    width: 100% !important;
+    margin-left: 70% !important;
+    margin-top: 20% !important;
+}
+
+.VatnoDiv{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.PhoneDiv{
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+
+.CompanyNameDivEdit{
+    margin-left: 10%;
+    width: 70%;
+    margin-top: 5%;
+
+}
+.submitbtn{
+    width: 15%;
+    margin-left: 65%;
+    margin-top: 5%;
+    color:#727171; ;
+}
+
+.EditCustomer{
+    margin-top: 1%;
 }

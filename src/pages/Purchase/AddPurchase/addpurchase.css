@@ -1,0 +1,30 @@
+
+.CardDiv{
+    width:80%;
+    margin-left: 20%;
+    box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.75);
+   
+
+}
+.VendorIdDiv{
+    margin-left: 15%;
+
+}
+
+.UserIdDiv{
+    margin-left: 10%;
+    
+    
+}
+
+.InvoicenoDiv{
+    margin-left: 15%;
+    margin-top: 3%;
+
+}
+
+.TotalAmountDiv{
+    margin-left: 10%;
+    margin-top: 3%;
+
+}

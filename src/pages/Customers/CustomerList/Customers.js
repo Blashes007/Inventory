@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // const btnstyle = { marginTop: "50px", marginLeft: "1100px", backgroundColor:'#727171',  };
-const btnstyle = { marginTop: "0%", marginLeft: "180%", backgroundColor:'#727171',height:40,width:80 };
+const btnstyle = { marginTop: "0%", marginLeft: "93%", backgroundColor:'#727171',height:40,width:80 };
 const style = {
   position: "absolute",
   top: "50%",
